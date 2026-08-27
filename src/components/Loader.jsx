@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Logo from "@/components/Logo";
 
 export default function Loader({ onComplete }) {
   const [progress, setProgress] = useState(0);
@@ -44,16 +45,21 @@ export default function Loader({ onComplete }) {
         />
       </div>
 
+      {/* Infinity-loop mark */}
+      <div className="mb-8 animate-fade-in">
+        <Logo variant="mark" markClassName="h-10 w-20 text-gold" />
+      </div>
+
       {/* Monogram */}
-      <div className="relative mb-12">
-        <span className="font-display text-7xl md:text-9xl font-light tracking-tight text-stroke-gold animate-fade-in">
-          HLR
+      <div className="relative mb-8">
+        <span className="font-display text-6xl md:text-8xl font-light tracking-tight text-stroke-gold animate-fade-in">
+          CC
         </span>
       </div>
 
       {/* Micro label */}
       <p className="text-mist text-[11px] tracking-micro uppercase mb-8 animate-fade-in">
-        Advocates &amp; Solicitors
+        Changaroth Chambers · Brunei Darussalam
       </p>
 
       {/* Counter */}

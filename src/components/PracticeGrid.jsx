@@ -33,12 +33,12 @@ const PRACTICES = [
   },
   {
     n: "04",
-    title: "Shariah",
+    title: "Syariah",
     items: [
       "Islamic finance structuring",
       "Family & personal status matters",
       "Wakaf and estate planning",
-      "Shariah-compliant transactions",
+      "Syariah-compliant transactions",
     ],
   },
 ];

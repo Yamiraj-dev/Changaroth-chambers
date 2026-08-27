@@ -6,12 +6,12 @@ const VALUES = [
     desc: "Licensed practitioners representing clients before all courts and tribunals with rigorous preparation and disciplined advocacy.",
   },
   {
-    title: "Dispute Resolutionists",
+    title: "Appropriate Dispute Resolution",
     desc: "Specialists in appropriate dispute resolution — mediation, arbitration, and negotiation as principled alternatives to litigation.",
   },
   {
-    title: "Shariah Counsel",
-    desc: "Advising on matters of Islamic law with scholarly depth and practical sensitivity to personal and commercial contexts.",
+    title: "Syariah Counsel",
+    desc: "Advising on matters of Syariah and Islamic law with scholarly depth and practical sensitivity to personal and commercial contexts.",
   },
   {
     title: "Commissioner for Oaths",
