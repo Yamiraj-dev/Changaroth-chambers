@@ -1,4 +1,5 @@
 import React from "react";
+import Logo from "@/components/Logo";
 
 export default function Footer() {
   return (
@@ -26,10 +27,15 @@ export default function Footer() {
           </button>
         </div>
 
-        {/* Massive HLR monogram */}
+        {/* Full logo block */}
+        <div className="flex justify-center mb-16">
+          <Logo variant="full" markClassName="text-gold" />
+        </div>
+
+        {/* Massive CC monogram */}
         <div className="flex justify-center mb-12">
           <span className="font-display text-[22vw] md:text-[18vw] lg:text-[15vw] font-light text-stroke-gold leading-none select-none">
-            HLR
+            CC
           </span>
         </div>
 
@@ -38,12 +44,12 @@ export default function Footer() {
           <div className="text-mist text-xs leading-relaxed max-w-xs">
             Advocates &amp; Solicitors · Appropriate Dispute Resolution
             <br />
-            Shariah Counsel · Commissioner for Oaths
+            Syariah Counsel · Commissioner for Oaths
             <br />
             Brunei Darussalam
           </div>
           <div className="text-mist text-xs leading-relaxed text-right">
-            © {new Date().getFullYear()} HLR Chambers. All rights reserved.
+            © {new Date().getFullYear()} Changaroth Chambers. All rights reserved.
             <br />
             <span className="text-mist/60">
               This website is intended for informational purposes only.

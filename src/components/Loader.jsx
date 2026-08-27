@@ -47,13 +47,13 @@ export default function Loader({ onComplete }) {
       {/* Monogram */}
       <div className="relative mb-12">
         <span className="font-display text-7xl md:text-9xl font-light tracking-tight text-stroke-gold animate-fade-in">
-          HLR
+          CC
         </span>
       </div>
 
       {/* Micro label */}
       <p className="text-mist text-[11px] tracking-micro uppercase mb-8 animate-fade-in">
-        Advocates &amp; Solicitors
+        Changaroth Chambers &middot; Brunei Darussalam
       </p>
 
       {/* Counter */}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Logo from "@/components/Logo";
 
 const NAV_ITEMS = [
   { label: "Home", to: "#hero" },
@@ -42,14 +43,12 @@ export default function CurtainNav() {
       >
         <div className="max-w-[1600px] mx-auto px-6 md:px-12 flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" onClick={(e) => { e.preventDefault(); handleNav("#hero"); }} className="group flex items-center gap-3">
-            <span className="font-display text-2xl font-semibold tracking-tight text-white group-hover:text-gold transition-colors">
-              HLR
-            </span>
-            <span className="hidden sm:block w-8 h-px bg-gold/50" />
-            <span className="hidden sm:block text-[10px] tracking-micro uppercase text-mist">
-              Advocates &amp; Solicitors
-            </span>
+          <Link
+            to="/"
+            onClick={(e) => { e.preventDefault(); handleNav("#hero"); }}
+            className="group [&_span]:transition-colors"
+          >
+            <Logo variant="compact" textClassName="text-white group-hover:text-gold" />
           </Link>
 
           {/* Menu trigger — two gold lines */}

@@ -65,7 +65,8 @@ module.exports = {
         forest: {
           DEFAULT: '#081A12',
           deep: '#050F0A',
-          light: '#0E2618'
+          light: '#0E2618',
+          mid: '#2D4B3D'
         },
         gold: {
           DEFAULT: '#D4AF37',
