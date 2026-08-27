@@ -1,7 +1,4 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -29,9 +26,9 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
-    --font-heading: ui-sans-serif, system-ui, sans-serif;
-    --font-body: ui-sans-serif, system-ui, sans-serif;
-    --font-display: ui-sans-serif, system-ui, sans-serif;
+    --font-heading: "Playfair Display", ui-serif, Georgia, serif;
+    --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Playfair Display", ui-serif, Georgia, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -41,52 +38,88 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* HLR Gilded Pillar palette */
+    --forest: #081A12;
+    --forest-deep: #050F0A;
+    --forest-light: #0E2618;
+    --gold: #D4AF37;
+    --gold-soft: #B8941F;
+    --gold-light: #E8C766;
+    --mist: #A3B0AA;
   }
 }
 
-
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
-
   body {
-    @apply bg-background text-foreground font-body;
+    @apply bg-forest text-white font-body antialiased;
   }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Playfair Display", ui-serif, Georgia, serif;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .tracking-micro {
+    letter-spacing: 0.18em;
+  }
+  /* The Gilded Thread — a thin gold rule */
+  .gilded-line {
+    @apply bg-gradient-to-r from-transparent via-gold to-transparent;
+  }
+  .text-stroke-gold {
+    -webkit-text-stroke: 1px #D4AF37;
+    color: transparent;
+  }
+  .text-stroke-mist {
+    -webkit-text-stroke: 1px rgba(163, 176, 170, 0.35);
+    color: transparent;
+  }
+  .bg-grain {
+    background-image: radial-gradient(rgba(212, 175, 55, 0.04) 1px, transparent 1px);
+    background-size: 3px 3px;
+  }
+}
+
+/* Smooth, heavy scroll — momentum inertia */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom selection */
+::selection {
+  background: #D4AF37;
+  color: #081A12;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050F0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a3326;
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* Hide scrollbar for horizontal scroll sections */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
