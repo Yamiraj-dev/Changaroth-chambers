@@ -1,7 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Image } from "@/components/ui/image";
-
-const HERO_IMG = "https://media.base44.com/images/public/6a905eb7064e9f37b1446f75/fe76d6ff6_generated_image.png";
 
 export default function Hero() {
   const ref = useRef(null);
@@ -48,23 +45,6 @@ export default function Hero() {
       >
         <span className="text-stroke-gold tracking-tighter">HLR</span>
       </h1>
-
-      {/* Centered portrait within composition */}
-      <div
-        className={`relative z-10 w-[clamp(220px,32vw,460px)] aspect-[3/4] overflow-hidden transition-all duration-[1400ms] ${
-          mounted ? "opacity-90 scale-100" : "opacity-0 scale-95"
-        }`}
-        style={{ transitionTimingFunction: "cubic-bezier(0.22,1,0.36,1)" }}
-      >
-        <Image
-          src={HERO_IMG}
-          alt="Architectural chiaroscuro detail"
-          className="w-full h-full object-cover"
-          fittingType="fill"
-        />
-        {/* Tint to merge with bg */}
-        <div className="absolute inset-0 bg-gradient-to-t from-forest-deep via-transparent to-forest-deep/40 mix-blend-multiply" />
-      </div>
 
       {/* Top-left micro label */}
       <div className={`absolute top-28 md:top-32 left-6 md:left-12 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`} style={{ transitionDelay: "400ms" }}>
