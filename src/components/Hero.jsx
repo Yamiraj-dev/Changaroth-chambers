@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Image } from "@/components/ui/image";
-import Logo from "@/components/Logo";
 
 const HERO_IMG = "https://media.base44.com/images/public/6a905eb7064e9f37b1446f75/fe76d6ff6_generated_image.png";
 
@@ -40,19 +39,14 @@ export default function Hero() {
       {/* Faint grain */}
       <div className="absolute inset-0 bg-grain opacity-40" />
 
-      {/* Infinity-loop mark centered near top */}
-      <div className={`absolute top-24 md:top-28 left-1/2 -translate-x-1/2 z-20 transition-all duration-1000 ${mounted ? "opacity-100 scale-100" : "opacity-0 scale-90"}`} style={{ transitionDelay: "300ms" }}>
-        <Logo variant="mark" markClassName="text-gold" className="" />
-      </div>
-
-      {/* Massive outlined CC monogram */}
+      {/* Massive outlined HLR */}
       <h1
         className={`absolute inset-0 flex items-center justify-center font-display font-light leading-none select-none pointer-events-none transition-all duration-[1200ms] ${
           mounted ? "opacity-100" : "opacity-0"
         }`}
         style={{ fontSize: "clamp(8rem, 28vw, 24rem)" }}
       >
-        <span className="text-stroke-gold tracking-tighter">CC</span>
+        <span className="text-stroke-gold tracking-tighter">HLR</span>
       </h1>
 
       {/* Centered portrait within composition */}
@@ -72,16 +66,12 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-forest-deep via-transparent to-forest-deep/40 mix-blend-multiply" />
       </div>
 
-      {/* Top-left micro label (desktop only) */}
-      <div className={`hidden md:flex absolute top-32 left-12 transition-all duration-1000 items-center gap-3 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`} style={{ transitionDelay: "400ms" }}>
-        <span className="w-8 h-px bg-gold/50" />
-        <span className="text-[10px] tracking-micro uppercase text-mist">Est. Brunei Darussalam</span>
-      </div>
-
-      {/* Top-right micro label (desktop only) */}
-      <div className={`hidden md:flex absolute top-32 right-12 transition-all duration-1000 items-center gap-3 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`} style={{ transitionDelay: "400ms" }}>
-        <span className="text-[10px] tracking-micro uppercase text-mist">Changaroth Chambers</span>
-        <span className="w-8 h-px bg-gold/50" />
+      {/* Top-left micro label */}
+      <div className={`absolute top-28 md:top-32 left-6 md:left-12 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`} style={{ transitionDelay: "400ms" }}>
+        <div className="flex items-center gap-3">
+          <span className="w-8 h-px bg-gold/50" />
+          <span className="text-[10px] tracking-micro uppercase text-mist">Est. Brunei Darussalam</span>
+        </div>
       </div>
 
       {/* Bottom content */}

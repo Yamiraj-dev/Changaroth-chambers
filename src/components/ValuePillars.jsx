@@ -10,7 +10,7 @@ const VALUES = [
     desc: "Specialists in appropriate dispute resolution — mediation, arbitration, and negotiation as principled alternatives to litigation.",
   },
   {
-    title: "Syariah Counsel",
+    title: "Shariah Counsel",
     desc: "Advising on matters of Islamic law with scholarly depth and practical sensitivity to personal and commercial contexts.",
   },
   {
