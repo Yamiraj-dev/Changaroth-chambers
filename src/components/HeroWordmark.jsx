@@ -1,71 +1,49 @@
 import React from "react";
 import { Image } from "@/components/ui/image";
 
-const LOGO_URL = "https://media.base44.com/images/public/6a905eb7064e9f37b1446f75/5e7f6fcc3_IMG_5309.png";
+const LOGO_URL = "https://media.base44.com/images/public/6a905eb7064e9f37b1446f75/1d22eb5b8_image.png";
+
+// Fades the logo's own light plate out into the dark hero — no square, no card edge.
+const FEATHER_GRADIENT =
+  "radial-gradient(ellipse 82% 74% at 50% 50%, #000 0%, #000 70%, rgba(0,0,0,0.75) 85%, transparent 100%)";
+
+const FEATHER = {
+  WebkitMaskImage: FEATHER_GRADIENT,
+  maskImage: FEATHER_GRADIENT,
+};
 
 export default function HeroWordmark({ mounted = false }) {
-  const step = (delay) => ({ transitionDelay: `${delay}ms` });
-
-  const base = `transition-all duration-[1100ms] ease-out ${
-    mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-  }`;
-
   return (
-    <div className="relative flex flex-col items-center text-center select-none">
-      {/* Arabic (Jawi) script line */}
-      <span
-        dir="rtl"
-        lang="ms-Arab"
-        className={`${base} font-arabic text-base sm:text-2xl md:text-3xl lg:text-4xl leading-[1.7] text-halo-gold`}
-        style={step(300)}
-      >
-        چاڠاروت چيمبرس
-      </span>
+    <div
+      className={`relative flex items-center justify-center select-none transition-all duration-[1400ms] ease-out ${
+        mounted ? "opacity-100 scale-100" : "opacity-0 scale-95"
+      }`}
+      style={{ transitionDelay: "300ms" }}
+    >
+      {/* Luminous spotlight pool — soft white light, fully transparent at the edges */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[175%] h-[175%]"
+        style={{
+          background:
+            "radial-gradient(ellipse 56% 54% at 50% 50%, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.86) 52%, rgba(255,255,255,0.32) 72%, rgba(212,175,55,0.12) 85%, transparent 100%)",
+        }}
+      />
 
-      {/* Official logo mark — original colourways, untouched */}
-      <span
-        className={`${base} mt-4 sm:mt-6 md:mt-8 inline-flex items-center justify-center bg-white rounded-sm p-2 sm:p-3 w-[68px] sm:w-[104px] md:w-[124px] shadow-2xl shadow-black/50`}
-        style={step(450)}
+      {/* Official logo — original colourways, untouched */}
+      <div
+        className="relative w-[220px] sm:w-[300px] md:w-[380px] lg:w-[440px]"
+        style={FEATHER}
       >
         <Image
           src={LOGO_URL}
-          alt=""
+          alt="Changaroth Chambers — Brunei Darussalam"
           fittingType="fit"
-          originWidth={1563}
-          originHeight={1563}
+          originWidth={1024}
+          originHeight={1024}
           className="w-full"
         />
-      </span>
-
-      {/* Forest bar */}
-      <span
-        className={`${base} mt-4 sm:mt-7 md:mt-9 block h-[4px] sm:h-[6px] w-12 sm:w-20 md:w-24 bg-[#2D4B3D]`}
-        style={step(600)}
-      />
-
-      {/* CHANGAROTH */}
-      <span
-        className={`${base} mt-4 sm:mt-7 md:mt-9 font-display font-semibold text-halo-gold text-2xl sm:text-4xl md:text-5xl lg:text-6xl tracking-[0.06em]`}
-        style={step(750)}
-      >
-        CHANGAROTH
-      </span>
-
-      {/* CHAMBERS */}
-      <span
-        className={`${base} mt-2 sm:mt-4 font-display font-light text-halo-gold text-[11px] sm:text-lg md:text-xl tracking-[0.5em] pl-[0.5em]`}
-        style={step(900)}
-      >
-        CHAMBERS
-      </span>
-
-      {/* BRUNEI DARUSSALAM */}
-      <span
-        className={`${base} mt-3 sm:mt-5 md:mt-6 font-body font-semibold text-halo-gold text-[9px] sm:text-xs md:text-sm tracking-[0.32em] pl-[0.32em]`}
-        style={step(1050)}
-      >
-        BRUNEI DARUSSALAM
-      </span>
+      </div>
     </div>
   );
 }
