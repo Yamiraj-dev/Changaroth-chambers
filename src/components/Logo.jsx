@@ -17,6 +17,46 @@ const Plate = ({ sizeClassName = "w-10 h-10", padding = "p-1" }) => (
 );
 
 export default function Logo({ variant = "compact", className = "" }) {
+  if (variant === "hero") {
+    return (
+      <div
+        className={`relative isolate flex items-center justify-center bg-forest-deep p-8 md:p-16 -mt-24 md:mt-0 ${className}`}
+        style={{
+          /* Feather the isolated blending surface so its edges melt into the
+             surrounding hero instead of reading as a square. */
+          maskImage: "radial-gradient(circle at center, #000 55%, transparent 82%)",
+          WebkitMaskImage: "radial-gradient(circle at center, #000 55%, transparent 82%)",
+        }}
+      >
+        {/* Gold radial glow lifting the mark off the dark green */}
+        <span
+          className="absolute -inset-[45%] pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(212,175,55,0.18) 0%, rgba(212,175,55,0.07) 45%, transparent 72%)",
+          }}
+        />
+        {/* Invert turns the white plate black and the black artwork light;
+            screen blending on the wrapper then drops the black plate away,
+            leaving only the luminous mark over the forest background. */}
+        <span
+          className="relative block w-[150px] sm:w-[220px] md:w-[290px] lg:w-[340px] -mb-6 md:mb-0"
+          style={{ mixBlendMode: "screen" }}
+        >
+          <Image
+            src={LOGO_URL}
+            alt="Changaroth Chambers"
+            fittingType="fit"
+            originWidth={1563}
+            originHeight={1563}
+            className="w-full"
+            style={{ filter: "invert(1) brightness(1.12)" }}
+          />
+        </span>
+      </div>
+    );
+  }
+
   if (variant === "mark") {
     return <Plate sizeClassName="w-14 h-14" padding="p-1.5" />;
   }

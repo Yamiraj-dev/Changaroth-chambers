@@ -37,19 +37,15 @@ export default function Hero() {
       {/* Faint grain */}
       <div className="absolute inset-0 bg-grain opacity-40" />
 
-      {/* Infinity-loop mark centered near top */}
-      <div className={`absolute top-24 md:top-28 left-1/2 -translate-x-1/2 z-20 transition-all duration-1000 ${mounted ? "opacity-100 scale-100" : "opacity-0 scale-90"}`} style={{ transitionDelay: "300ms" }}>
-        <Logo variant="mark" />
-      </div>
-
-      {/* Massive outlined CC monogram */}
+      {/* Official logo, centered as the hero mark */}
       <h1
-        className={`absolute inset-0 flex items-center justify-center font-display font-light leading-none select-none pointer-events-none transition-all duration-[1200ms] ${
-          mounted ? "opacity-100" : "opacity-0"
+        className={`relative z-20 flex items-center justify-center transition-all duration-[1200ms] ${
+          mounted ? "opacity-100 scale-100" : "opacity-0 scale-95"
         }`}
-        style={{ fontSize: "clamp(8rem, 28vw, 24rem)" }}
+        style={{ transitionDelay: "300ms" }}
       >
-        <span className="text-stroke-gold tracking-tighter">CC</span>
+        <Logo variant="hero" />
+        <span className="sr-only">Changaroth Chambers</span>
       </h1>
 
       {/* Top-left micro label */}
