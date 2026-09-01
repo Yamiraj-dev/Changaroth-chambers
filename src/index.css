@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;600&display=swap');
+
 @tailwind base;
 @layer base {
   :root {
@@ -74,6 +76,15 @@
   /* The Gilded Thread — a thin gold rule */
   .gilded-line {
     @apply bg-gradient-to-r from-transparent via-gold to-transparent;
+  }
+  /* Transparent letters lifted by a layered gold glow halo */
+  .text-halo-gold {
+    color: transparent;
+    text-shadow:
+      0 0 1px rgba(212, 175, 55, 0.85),
+      0 0 8px rgba(212, 175, 55, 0.55),
+      0 0 16px rgba(212, 175, 55, 0.35),
+      0 0 32px rgba(212, 175, 55, 0.2);
   }
   .text-stroke-gold {
     -webkit-text-stroke: 1px #D4AF37;

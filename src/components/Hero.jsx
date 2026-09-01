@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import Logo from "@/components/Logo";
+import HeroWordmark from "@/components/HeroWordmark";
 
 export default function Hero() {
   const ref = useRef(null);
@@ -24,7 +24,7 @@ export default function Hero() {
       id="hero"
       ref={ref}
       onMouseMove={handleMouse}
-      className="relative h-screen min-h-[700px] w-full overflow-hidden bg-forest-deep flex items-center justify-center"
+      className="relative h-screen min-h-[700px] w-full overflow-hidden bg-forest-deep flex items-start md:items-center justify-center"
     >
       {/* Radial glow following cursor */}
       <div
@@ -37,19 +37,14 @@ export default function Hero() {
       {/* Faint grain */}
       <div className="absolute inset-0 bg-grain opacity-40" />
 
-      {/* Official logo, centered as the hero mark */}
-      <h1
-        className={`relative z-20 flex items-center justify-center transition-all duration-[1200ms] ${
-          mounted ? "opacity-100 scale-100" : "opacity-0 scale-95"
-        }`}
-        style={{ transitionDelay: "300ms" }}
-      >
-        <Logo variant="hero" />
-        <span className="sr-only">Changaroth Chambers</span>
+      {/* Stacked wordmark, centered as the hero mark */}
+      <h1 className="relative z-20 mt-32 md:mt-0 md:-mt-10 flex items-center justify-center">
+        <HeroWordmark mounted={mounted} />
+        <span className="sr-only">Changaroth Chambers — Brunei Darussalam</span>
       </h1>
 
       {/* Top-left micro label */}
-      <div className={`absolute top-52 md:top-32 left-6 md:left-12 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`} style={{ transitionDelay: "400ms" }}>
+      <div className={`absolute top-24 md:top-32 left-6 md:left-12 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`} style={{ transitionDelay: "400ms" }}>
         <div className="flex items-center gap-3">
           <span className="w-8 h-px bg-gold/50" />
           <span className="text-[10px] tracking-micro uppercase text-mist">Est. Brunei Darussalam</span>
