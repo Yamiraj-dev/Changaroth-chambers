@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import HeroWordmark from "@/components/HeroWordmark";
-import HeroAtmosphere from "@/components/HeroAtmosphere";
 
 export default function Hero() {
   const ref = useRef(null);
@@ -27,13 +26,11 @@ export default function Hero() {
       onMouseMove={handleMouse}
       className="relative h-screen min-h-[700px] w-full overflow-hidden bg-forest-deep flex items-start md:items-center justify-center"
     >
-      <HeroAtmosphere />
-
       {/* Radial glow following cursor */}
       <div
         className="absolute inset-0 pointer-events-none transition-opacity duration-700"
         style={{
-          background: `radial-gradient(520px circle at 50% ${glowY}%, rgba(212,175,55,0.07), transparent 64%)`,
+          background: `radial-gradient(600px circle at 50% ${glowY}%, rgba(212,175,55,0.10), transparent 60%)`,
         }}
       />
 
