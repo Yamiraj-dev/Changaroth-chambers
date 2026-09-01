@@ -15,6 +15,9 @@ export default function OfficialHeroMark() {
             type="matrix"
             values="0 0 0 0 0.878  0 0 0 0 0.863  0 0 0 0 0.812  0 0 0 1 0"
           />
+          <feComponentTransfer>
+            <feFuncA type="table" tableValues="0 0 0 0.1 1 1" />
+          </feComponentTransfer>
         </filter>
         <clipPath id="official-mark-crop">
           <rect x="0" y="120" width="1563" height="735" />
