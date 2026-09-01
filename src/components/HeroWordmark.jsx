@@ -39,8 +39,8 @@ export default function HeroWordmark({ mounted = false }) {
           src={LOGO_URL}
           alt="Changaroth Chambers — Brunei Darussalam"
           fittingType="fit"
-          originWidth={1024}
-          originHeight={1024}
+          originWidth={2048}
+          originHeight={2048}
           className="w-full"
         />
       </div>
