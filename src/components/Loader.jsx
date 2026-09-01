@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Logo from "@/components/Logo";
+import { Image } from "@/components/ui/image";
+
+const LOGO_URL = "https://media.base44.com/images/public/6a905eb7064e9f37b1446f75/5e7f6fcc3_IMG_5309.png";
 
 export default function Loader({ onComplete }) {
   const [progress, setProgress] = useState(0);
@@ -45,22 +47,17 @@ export default function Loader({ onComplete }) {
         />
       </div>
 
-      {/* Infinity-loop mark */}
-      <div className="mb-8 animate-fade-in">
-        <Logo variant="mark" markClassName="h-10 w-20 text-gold" />
+      {/* Official logo — brand reveal */}
+      <div className="animate-fade-in bg-white rounded-sm border border-gold/15 p-5 sm:p-6 shadow-2xl shadow-black/50 w-[200px] sm:w-[230px]">
+        <Image
+          src={LOGO_URL}
+          alt="Changaroth Chambers"
+          fittingType="fit"
+          originWidth={1563}
+          originHeight={1563}
+          className="w-full"
+        />
       </div>
-
-      {/* Monogram */}
-      <div className="relative mb-8">
-        <span className="font-display text-6xl md:text-8xl font-light tracking-tight text-stroke-gold animate-fade-in">
-          CC
-        </span>
-      </div>
-
-      {/* Micro label */}
-      <p className="text-mist text-[11px] tracking-micro uppercase mb-8 animate-fade-in">
-        Changaroth Chambers · Brunei Darussalam
-      </p>
 
       {/* Counter */}
       <div className="flex items-baseline gap-1">

@@ -1,5 +1,7 @@
 import React from "react";
-import Logo from "@/components/Logo";
+import { Image } from "@/components/ui/image";
+
+const LOGO_URL = "https://media.base44.com/images/public/6a905eb7064e9f37b1446f75/5e7f6fcc3_IMG_5309.png";
 
 export default function Footer() {
   return (
@@ -27,9 +29,18 @@ export default function Footer() {
           </button>
         </div>
 
-        {/* Full logo block */}
+        {/* Official logo plate */}
         <div className="flex justify-center mb-16">
-          <Logo variant="full" markClassName="text-gold" />
+          <div className="bg-white rounded-sm border border-gold/15 p-6 shadow-2xl shadow-black/50 w-[200px] sm:w-[230px]">
+            <Image
+              src={LOGO_URL}
+              alt="Changaroth Chambers"
+              fittingType="fit"
+              originWidth={1563}
+              originHeight={1563}
+              className="w-full"
+            />
+          </div>
         </div>
 
         {/* Massive CC monogram */}
