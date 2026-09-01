@@ -23,7 +23,7 @@ export default function Home() {
   }
 
   return (
-    <div className="relative bg-forest min-h-screen">
+    <div className="relative bg-forest-deep min-h-screen">
       <CurtainNav />
       <main>
         <Hero />

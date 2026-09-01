@@ -48,7 +48,7 @@ export default function ValuePillars() {
         </h2>
 
         {/* Two-column: professions on left, attributes on right */}
-        <div className="grid grid-cols-1 lg:grid-cols-[35%_65%] gap-12 lg:gap-24">
+        <div className="grid grid-cols-1 lg:grid-cols-[35fr_65fr] gap-12 lg:gap-24">
           {/* Professions list */}
           <div className="space-y-8">
             {VALUES.map((v) => (

@@ -57,7 +57,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-forest text-white font-body antialiased;
+    @apply bg-forest-deep text-white font-body antialiased;
   }
 }
 
@@ -101,6 +101,9 @@ html {
 }
 
 /* Scrollbar */
+html {
+  scrollbar-color: #1a3326 #050F0A;
+}
 ::-webkit-scrollbar {
   width: 8px;
 }
