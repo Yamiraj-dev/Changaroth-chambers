@@ -39,7 +39,7 @@ export default function Hero() {
 
       {/* Infinity-loop mark centered near top */}
       <div className={`absolute top-24 md:top-28 left-1/2 -translate-x-1/2 z-20 transition-all duration-1000 ${mounted ? "opacity-100 scale-100" : "opacity-0 scale-90"}`} style={{ transitionDelay: "300ms" }}>
-        <Logo variant="mark" markClassName="h-8 w-16 text-gold" />
+        <Logo variant="mark" />
       </div>
 
       {/* Massive outlined CC monogram */}
@@ -53,7 +53,7 @@ export default function Hero() {
       </h1>
 
       {/* Top-left micro label */}
-      <div className={`absolute top-28 md:top-32 left-6 md:left-12 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`} style={{ transitionDelay: "400ms" }}>
+      <div className={`absolute top-52 md:top-32 left-6 md:left-12 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`} style={{ transitionDelay: "400ms" }}>
         <div className="flex items-center gap-3">
           <span className="w-8 h-px bg-gold/50" />
           <span className="text-[10px] tracking-micro uppercase text-mist">Est. Brunei Darussalam</span>
