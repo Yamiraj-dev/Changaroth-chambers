@@ -1,9 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import HeroWordmark from "@/components/HeroWordmark";
+import HeroAtmosphere from "@/components/HeroAtmosphere";
 
 export default function Hero() {
-  const ref = useRef(null);
-  const [glowY, setGlowY] = useState(50);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -11,28 +10,12 @@ export default function Hero() {
     return () => clearTimeout(t);
   }, []);
 
-  // Mouse-move gilded glow follows cursor Y
-  const handleMouse = (e) => {
-    if (!ref.current) return;
-    const rect = ref.current.getBoundingClientRect();
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
-    setGlowY(Math.max(10, Math.min(90, y)));
-  };
-
   return (
     <section
       id="hero"
-      ref={ref}
-      onMouseMove={handleMouse}
       className="relative h-screen min-h-[700px] w-full overflow-hidden bg-forest-deep flex items-start md:items-center justify-center"
     >
-      {/* Radial glow following cursor */}
-      <div
-        className="absolute inset-0 pointer-events-none transition-opacity duration-700"
-        style={{
-          background: `radial-gradient(600px circle at 50% ${glowY}%, rgba(212,175,55,0.10), transparent 60%)`,
-        }}
-      />
+      <HeroAtmosphere />
 
       {/* Faint grain */}
       <div className="absolute inset-0 bg-grain opacity-40" />
@@ -87,7 +70,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className={`absolute bottom-6 left-1/2 -translate-x-1/2 transition-opacity duration-1000 ${mounted ? "opacity-60" : "opacity-0"}`} style={{ transitionDelay: "1000ms" }}>
+      <div className={`hidden md:block absolute bottom-6 left-1/2 -translate-x-1/2 transition-opacity duration-1000 ${mounted ? "opacity-60" : "opacity-0"}`} style={{ transitionDelay: "1000ms" }}>
         <div className="flex flex-col items-center gap-2">
           <span className="text-[9px] tracking-micro uppercase text-mist">Scroll</span>
           <span className="w-px h-8 bg-gradient-to-b from-gold to-transparent animate-pulse" />
