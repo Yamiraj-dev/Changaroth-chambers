@@ -74,7 +74,10 @@ module.exports = {
         },
         mist: {
           DEFAULT: '#A3B0AA'
-        }
+        },
+        'hero-cream': 'rgb(var(--hero-cream) / <alpha-value>)',
+        'hero-bar': 'rgb(var(--hero-bar) / <alpha-value>)',
+        'hero-gold': 'rgb(var(--hero-gold) / <alpha-value>)'
       },
       fontFamily: {
         heading: ['var(--font-heading)'],

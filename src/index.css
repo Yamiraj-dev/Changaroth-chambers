@@ -48,6 +48,18 @@
     --gold-soft: #B8941F;
     --gold-light: #E8C766;
     --mist: #A3B0AA;
+    --hero-center: 10 18 10;
+    --hero-edge: 3 5 3;
+    --hero-cream: 224 220 207;
+    --hero-bar: 45 109 86;
+    --hero-gold: 197 160 89;
+  }
+  .dark {
+    --hero-center: 10 18 10;
+    --hero-edge: 3 5 3;
+    --hero-cream: 224 220 207;
+    --hero-bar: 45 109 86;
+    --hero-gold: 197 160 89;
   }
 }
 
@@ -97,6 +109,15 @@
   .bg-grain {
     background-image: radial-gradient(rgba(212, 175, 55, 0.04) 1px, transparent 1px);
     background-size: 3px 3px;
+  }
+  .hero-atmosphere-base {
+    background: radial-gradient(circle at 50% 46%, rgb(var(--hero-center)) 0%, rgb(7 16 8) 34%, rgb(var(--hero-edge)) 100%);
+  }
+  .hero-atmosphere-glow {
+    background: radial-gradient(ellipse 28% 38% at 50% 47%, rgb(var(--hero-cream) / 0.13) 0%, rgb(var(--hero-bar) / 0.08) 38%, transparent 76%);
+  }
+  .hero-atmosphere-fade {
+    background: linear-gradient(to bottom, transparent, transparent, rgb(var(--hero-edge) / 0.7));
   }
 }
 

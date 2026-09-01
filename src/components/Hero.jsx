@@ -27,7 +27,7 @@ export default function Hero() {
       </h1>
 
       {/* Top-left micro label */}
-      <div className={`absolute top-24 md:top-32 left-6 md:left-12 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`} style={{ transitionDelay: "400ms" }}>
+      <div className={`absolute top-24 left-6 md:left-12 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`} style={{ transitionDelay: "400ms" }}>
         <div className="flex items-center gap-3">
           <span className="w-8 h-px bg-gold/50" />
           <span className="text-[10px] tracking-micro uppercase text-mist">Est. Brunei Darussalam</span>
