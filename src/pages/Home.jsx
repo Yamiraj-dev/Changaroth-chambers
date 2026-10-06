@@ -10,12 +10,13 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(!window.location.hash);
 
   useEffect(() => {
-    if (!loading) {
-      window.scrollTo(0, 0);
-    }
+    if (loading) return;
+    const el = window.location.hash && document.querySelector(window.location.hash);
+    if (el) setTimeout(() => el.scrollIntoView({ behavior: "smooth" }), 100);
+    else window.scrollTo(0, 0);
   }, [loading]);
 
   if (loading) {

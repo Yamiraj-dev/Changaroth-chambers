@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import Logo from "@/components/Logo";
+import useCurrentUser from "@/hooks/useCurrentUser";
 
 const NAV_ITEMS = [
   { label: "Home", to: "#hero" },
@@ -9,9 +10,14 @@ const NAV_ITEMS = [
   { label: "Our Approach", to: "#approach" },
   { label: "Client Support", to: "#support" },
   { label: "Contact", to: "#contact" },
+  { label: "News", to: "/news" },
+  { label: "Social", to: "/social" },
 ];
 
 export default function CurtainNav() {
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
+  const { isAdmin } = useCurrentUser();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -28,6 +34,8 @@ export default function CurtainNav() {
   const handleNav = (to) => {
     setOpen(false);
     setTimeout(() => {
+      if (to.startsWith("/")) return navigate(to);
+      if (pathname !== "/") return navigate("/" + to);
       const el = document.querySelector(to);
       if (el) el.scrollIntoView({ behavior: "smooth" });
     }, 350);
@@ -94,7 +102,7 @@ export default function CurtainNav() {
                   <span className="font-display italic text-gold/60 text-sm md:text-base tabular-nums w-8">
                     0{i + 1}
                   </span>
-                  <span className="font-display text-5xl md:text-7xl lg:text-8xl font-light text-white group-hover:text-gold group-hover:translate-x-4 transition-all duration-500 tracking-tight">
+                  <span className="font-display text-4xl md:text-6xl lg:text-7xl font-light text-white group-hover:text-gold group-hover:translate-x-4 transition-all duration-500 tracking-tight">
                     {item.label}
                   </span>
                 </button>
@@ -108,6 +116,11 @@ export default function CurtainNav() {
             <span className="text-[10px] tracking-micro uppercase text-mist">
               Locally Rooted — Regionally Connected
             </span>
+            {isAdmin && (
+              <button onClick={() => handleNav("/admin")} className="ml-auto text-[10px] tracking-micro uppercase text-gold hover:text-gold-light">
+                Publishing
+              </button>
+            )}
           </div>
         </nav>
       </div>

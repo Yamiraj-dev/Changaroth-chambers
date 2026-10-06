@@ -1,0 +1,68 @@
+{
+  "name": "SocialPost",
+  "type": "object",
+  "properties": {
+    "platform": {
+      "type": "string",
+      "enum": [
+        "linkedin",
+        "instagram"
+      ]
+    },
+    "external_id": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "post_url": {
+      "type": "string"
+    },
+    "posted_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "hidden": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "platform",
+    "external_id"
+  ],
+  "rls": {
+    "read": {
+      "$or": [
+        {
+          "data.hidden": {
+            "$ne": true
+          }
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

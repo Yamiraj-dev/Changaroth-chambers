@@ -1,13 +1,24 @@
 import { Toaster } from "@/components/ui/toaster"
 import { QueryClientProvider } from '@tanstack/react-query'
 import { queryClientInstance } from '@/lib/query-client'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import ScrollToTop from './components/ScrollToTop';
 // Add page imports here
 import Home from '@/pages/Home';
+import Login from '@/pages/Login';
+import Register from '@/pages/Register';
+import ForgotPassword from '@/pages/ForgotPassword';
+import ResetPassword from '@/pages/ResetPassword';
+import News from '@/pages/News';
+import ArticleView from '@/pages/ArticleView';
+import Social from '@/pages/Social';
+import AdminArticles from '@/pages/AdminArticles';
+import ArticleEditor from '@/pages/ArticleEditor';
+import ProtectedRoute from '@/components/ProtectedRoute';
+import AdminGate from '@/components/admin/AdminGate';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -37,6 +48,20 @@ const AuthenticatedApp = () => {
     <Routes>
       {/* Add your page Route elements here */}
       <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
+      <Route path="/reset-password" element={<ResetPassword />} />
+      <Route path="/news" element={<News />} />
+      <Route path="/news/:slug" element={<ArticleView />} />
+      <Route path="/social" element={<Social />} />
+      <Route element={<ProtectedRoute unauthenticatedElement={<Navigate to="/login?returnTo=%2Fadmin" replace />} />}>
+        <Route element={<AdminGate />}>
+          <Route path="/admin" element={<AdminArticles />} />
+          <Route path="/admin/new" element={<ArticleEditor />} />
+          <Route path="/admin/edit/:id" element={<ArticleEditor />} />
+        </Route>
+      </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
