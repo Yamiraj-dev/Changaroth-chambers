@@ -60,8 +60,8 @@ export default function ContactSection() {
               <div className="flex flex-col sm:flex-row gap-6">
                 <div>
                   <p className="text-[10px] tracking-micro uppercase text-gold mb-1">Telephone</p>
-                  <a href="tel:+6732220000" className="text-white text-sm hover:text-gold transition-colors">
-                    +673 222 0000
+                  <a href="tel:+6732220000" className="text-white text-sm hover:text-gold transition-colors">+673 8329181
+
                   </a>
                 </div>
                 <div>
@@ -81,11 +81,11 @@ export default function ContactSection() {
               </div>
               {/* Social */}
               <div className="flex items-center gap-5 pt-2">
-                {[Instagram, Facebook, Linkedin].map((Icon, i) => (
-                  <a key={i} href="#" className="text-mist hover:text-gold transition-colors" aria-label="Social">
+                {[Instagram, Facebook, Linkedin].map((Icon, i) =>
+                <a key={i} href="#" className="text-mist hover:text-gold transition-colors" aria-label="Social">
                     <Icon className="w-5 h-5" strokeWidth={1.5} />
                   </a>
-                ))}
+                )}
               </div>
             </div>
           </div>
@@ -108,8 +108,8 @@ export default function ContactSection() {
                   value={form.name}
                   onChange={handleChange}
                   className="w-full bg-transparent border-0 border-b border-white/20 pb-3 text-white text-lg font-display font-light focus:outline-none focus:border-gold transition-colors placeholder:text-mist/40"
-                  placeholder="Your full name"
-                />
+                  placeholder="Your full name" />
+                
               </div>
 
               {/* Matter */}
@@ -123,8 +123,8 @@ export default function ContactSection() {
                   value={form.matter}
                   onChange={handleChange}
                   className="w-full bg-transparent border-0 border-b border-white/20 pb-3 text-white text-lg font-display font-light focus:outline-none focus:border-gold transition-colors placeholder:text-mist/40"
-                  placeholder="Briefly, the nature of your matter"
-                />
+                  placeholder="Briefly, the nature of your matter" />
+                
               </div>
 
               {/* Contact */}
@@ -138,15 +138,15 @@ export default function ContactSection() {
                   value={form.contact}
                   onChange={handleChange}
                   className="w-full bg-transparent border-0 border-b border-white/20 pb-3 text-white text-lg font-display font-light focus:outline-none focus:border-gold transition-colors placeholder:text-mist/40"
-                  placeholder="Email or telephone"
-                />
+                  placeholder="Email or telephone" />
+                
               </div>
 
               {/* Submit — full-width gold bar */}
               <button
                 type="submit"
-                className="group relative w-full py-5 border border-gold overflow-hidden transition-all duration-500 mt-4"
-              >
+                className="group relative w-full py-5 border border-gold overflow-hidden transition-all duration-500 mt-4">
+                
                 <span className="absolute inset-0 bg-gold translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
                 <span className="relative font-display text-lg text-gold group-hover:text-forest transition-colors duration-500 tracking-wide">
                   {sent ? "Request Received" : "Request Consultation"}
@@ -161,6 +161,6 @@ export default function ContactSection() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
