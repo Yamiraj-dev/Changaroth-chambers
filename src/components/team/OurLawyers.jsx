@@ -9,7 +9,7 @@ const QUOTE = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
 const LAWYERS = [
   { name: "Lenny Rahman", role: "Principal", image: BASE + "f2d16fd32_LR.jpg" },
   { name: "Miza Musa", image: BASE + "911a8ea8e_miza.jpg" },
-  { name: "Zunorin Rahman", role: "Syar'ie Counsel", image: BASE + "39e478dc1_zunorin.jpg" },
+  { name: "Zunorin Rahman", role: "Syarie Counsel", image: BASE + "39e478dc1_zunorin.jpg" },
   { name: "Izzatul Mohaimin", image: BASE + "a1afc7841_izzatul.jpg" },
   { name: "Rulzaimi Ramlee", image: BASE + "ead667abf_zaimi.jpg" },
   { name: "Ahmad Zahid Borhan", image: BASE + "60f739837_zahid.jpg" },
