@@ -7,13 +7,13 @@ const QUOTE = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
 
 // Update each lawyer's role, quote and bio here.
 const LAWYERS = [
+  { name: "Lenny Rahman", role: "Principal", image: BASE + "f2d16fd32_LR.jpg" },
   { name: "Miza Musa", image: BASE + "911a8ea8e_miza.jpg" },
-  { name: "Ahmad Zahid Borhan", image: BASE + "60f739837_zahid.jpg" },
-  { name: "Zunorin Rahman", image: BASE + "39e478dc1_zunorin.jpg" },
+  { name: "Zunorin Rahman", role: "Syar'ie Counsel", image: BASE + "39e478dc1_zunorin.jpg" },
   { name: "Izzatul Mohaimin", image: BASE + "a1afc7841_izzatul.jpg" },
-  { name: "Lenny Rahman", image: BASE + "f2d16fd32_LR.jpg" },
   { name: "Rulzaimi Ramlee", image: BASE + "ead667abf_zaimi.jpg" },
-].map((l) => ({ role: "Advocate & Solicitor", quote: QUOTE, bio: BIO, ...l }));
+  { name: "Ahmad Zahid Borhan", image: BASE + "60f739837_zahid.jpg" },
+].map((l) => ({ role: "Associate", quote: QUOTE, bio: BIO, ...l }));
 
 export default function OurLawyers() {
   return (
