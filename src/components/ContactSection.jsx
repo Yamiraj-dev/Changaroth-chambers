@@ -50,11 +50,13 @@ export default function ContactSection() {
               <div>
                 <p className="text-[10px] tracking-micro uppercase text-gold mb-1">Address</p>
                 <p className="text-white text-sm leading-relaxed">
-                  Unit 3.02, Level 3, Dar Takaful IBB Utama
+                  Units 6 &amp; 7, Second Floor, Simpang 13-25
                   <br />
-                  Jalan Pemancha, Bandar Seri Begawan
+                  The Airport Mall, Jln Komersial Jaya Setia
                   <br />
-                  Brunei Darussalam BS8611
+                  Mukim Berakas A, Bandar Seri Begawan BB2713
+                  <br />
+                  Brunei Darussalam
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-6">
