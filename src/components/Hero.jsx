@@ -40,9 +40,9 @@ export default function Hero() {
           {/* Tagline */}
           <div className="max-w-xl">
             <p className="font-display text-2xl md:text-3xl font-light text-white leading-snug">
-              Locally Rooted,
+              Rights Respected,
               <br />
-              <span className="text-gold">Regionally Connected.</span>
+              <span className="text-gold">Disputes Resolved.</span>
             </p>
           </div>
 
