@@ -63,9 +63,9 @@ module.exports = {
         },
         /* HLR Gilded Pillar */
         forest: {
-          DEFAULT: '#0F2A0F',
-          deep: '#0B210B',
-          light: '#143514'
+          DEFAULT: '#132119',
+          deep: '#0E1A13',
+          light: '#192A20'
         },
         gold: {
           DEFAULT: '#D4AF37',
