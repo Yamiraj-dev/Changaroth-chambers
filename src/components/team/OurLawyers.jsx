@@ -21,7 +21,7 @@ export default function OurLawyers() {
     <section id="team" className="relative bg-forest-deep py-24 lg:py-16 px-6 md:px-12 lg:min-h-screen lg:flex lg:items-center">
       <div className="max-w-[1600px] mx-auto w-full">
         <div className="flex items-center gap-4 mb-8">
-          <span className="font-display italic text-gold text-sm">04</span>
+          <span className="font-display italic text-gold text-sm">03</span>
           <span className="w-12 h-px bg-gold/40" />
           <span className="text-[11px] tracking-micro uppercase text-mist">Our Lawyers</span>
         </div>

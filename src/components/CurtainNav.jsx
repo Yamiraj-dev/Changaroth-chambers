@@ -5,8 +5,9 @@ import useCurrentUser from "@/hooks/useCurrentUser";
 
 const NAV_ITEMS = [
   { label: "Home", to: "#hero" },
-  { label: "Main Practices", to: "#practices" },
-  { label: "Our Approach", to: "#approach" },
+  { label: "Areas of Practice", to: "#practices" },
+  { label: "How We Practice", to: "#approach" },
+  { label: "Our Lawyers", to: "#team" },
   { label: "Client Support", to: "#support" },
   { label: "Contact", to: "#contact" },
   { label: "News", to: "/news" },
@@ -60,7 +61,7 @@ export default function CurtainNav() {
             className="group flex items-center gap-3 text-mist hover:text-gold transition-colors"
             aria-label="Open menu"
           >
-            <span className="text-[10px] tracking-micro uppercase">Menu</span>
+            <span className="text-base md:text-lg font-medium tracking-micro uppercase">Menu</span>
             <span className="flex flex-col gap-[5px]">
               <span className="block w-8 h-px bg-gold group-hover:w-10 transition-all duration-300" />
               <span className="block w-6 h-px bg-gold group-hover:w-10 transition-all duration-300" />
