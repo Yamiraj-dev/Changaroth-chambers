@@ -15,6 +15,8 @@ import ResetPassword from '@/pages/ResetPassword';
 import News from '@/pages/News';
 import ArticleView from '@/pages/ArticleView';
 import Social from '@/pages/Social';
+import About from '@/pages/About';
+import Contact from '@/pages/Contact';
 import AdminArticles from '@/pages/AdminArticles';
 import ArticleEditor from '@/pages/ArticleEditor';
 import ProtectedRoute from '@/components/ProtectedRoute';
@@ -55,6 +57,8 @@ const AuthenticatedApp = () => {
       <Route path="/news" element={<News />} />
       <Route path="/news/:slug" element={<ArticleView />} />
       <Route path="/social" element={<Social />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
       <Route element={<ProtectedRoute unauthenticatedElement={<Navigate to="/login?returnTo=%2Fadmin" replace />} />}>
         <Route element={<AdminGate />}>
           <Route path="/admin" element={<AdminArticles />} />

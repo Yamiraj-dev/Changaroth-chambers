@@ -1,5 +1,6 @@
 import React from "react";
 import HeroWordmark from "@/components/HeroWordmark";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -40,6 +41,10 @@ export default function Footer() {
             Syariah Counsel · Commissioner for Oaths
             <br />
             Brunei Darussalam
+            <div className="mt-4 flex gap-6">
+              <Link to="/about" className="text-gold hover:text-gold-light uppercase tracking-micro text-[11px]">About</Link>
+              <Link to="/contact" className="text-gold hover:text-gold-light uppercase tracking-micro text-[11px]">Contact</Link>
+            </div>
           </div>
           <div className="text-mist text-xs leading-relaxed text-right">
             © {new Date().getFullYear()} Changaroth Chambers. All rights reserved.
