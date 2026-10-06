@@ -68,7 +68,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="text-[10px] tracking-micro uppercase text-gold mb-1">Email</p>
-                  <a href="mailto:chambers@changaroth.bn" className="text-white text-sm hover:text-gold transition-colors">reseve@changaroth.bn
+                  <a href="mailto:chambers@changaroth.bn" className="text-white text-sm hover:text-gold transition-colors">resolve@changarothchambersbn.com
 
                   </a>
                 </div>
