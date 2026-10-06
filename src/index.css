@@ -41,9 +41,9 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
     /* HLR Gilded Pillar palette */
-    --forest: #0A1E15;
+    --forest: #091A12;
     --forest-deep: #07130D;
-    --forest-light: #112B1D;
+    --forest-light: #0F2519;
     --gold: #D4AF37;
     --gold-soft: #B8941F;
     --gold-light: #E8C766;
@@ -136,14 +136,14 @@
 .article-body img { margin: 2rem 0; border: 1px solid rgba(212,175,55,0.15); max-width: 100%; }
 
 /* Rich editor on dark */
-.rich-editor .ql-toolbar.ql-snow { border: 1px solid rgba(212,175,55,0.2); background: #0A1E15; }
+.rich-editor .ql-toolbar.ql-snow { border: 1px solid rgba(212,175,55,0.2); background: #091A12; }
 .rich-editor .ql-container.ql-snow { border: 1px solid rgba(212,175,55,0.2); border-top: 0; min-height: 360px; font-family: "Inter", sans-serif; font-size: 1rem; color: #e0dccf; }
 .rich-editor .ql-editor { min-height: 360px; line-height: 1.8; }
 .rich-editor .ql-editor.ql-blank::before { color: rgba(163,176,170,0.5); font-style: normal; }
 .rich-editor .ql-snow .ql-stroke { stroke: #A3B0AA; }
 .rich-editor .ql-snow .ql-fill { fill: #A3B0AA; }
 .rich-editor .ql-snow .ql-picker { color: #A3B0AA; }
-.rich-editor .ql-snow .ql-picker-options { background: #0A1E15; }
+.rich-editor .ql-snow .ql-picker-options { background: #091A12; }
 .rich-editor .ql-snow button:hover .ql-stroke, .rich-editor .ql-snow .ql-active .ql-stroke { stroke: #D4AF37; }
 
 /* Readability boost — heavier, larger, higher-contrast slim text */
@@ -165,7 +165,7 @@ html {
 /* Custom selection */
 ::selection {
   background: #D4AF37;
-  color: #0A1E15;
+  color: #091A12;
 }
 
 /* Scrollbar */
