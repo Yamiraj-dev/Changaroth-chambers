@@ -57,7 +57,7 @@ export default function PracticeGrid() {
         <h2 className="font-display text-5xl md:text-7xl lg:text-8xl font-light leading-[1.05] tracking-tight text-balance mb-16 md:mb-24">
           Four pillars of
           <br />
-          <span className="text-stroke-gold">practice.</span>
+          <span className="text-gold">practice.</span>
         </h2>
 
         {/* Asymmetrical 4-column grid */}

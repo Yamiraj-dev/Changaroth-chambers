@@ -32,7 +32,7 @@ export default function OurApproach() {
             <h2 className="font-display text-5xl md:text-7xl lg:text-8xl font-light leading-[1.05] tracking-tight text-balance">
               How we
               <br />
-              <span className="text-stroke-gold">practice.</span>
+              <span className="text-gold">practice.</span>
             </h2>
             <p className="text-mist text-base md:text-lg leading-relaxed mt-10 max-w-md">
               Our work reflects a balance between local responsibility and broader

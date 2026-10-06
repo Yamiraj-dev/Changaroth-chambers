@@ -38,7 +38,7 @@ export default function ContactSection() {
             <h2 className="font-display text-5xl md:text-7xl lg:text-8xl font-light leading-[1.05] tracking-tight text-balance mb-12">
               Begin a
               <br />
-              <span className="text-stroke-gold">conversation.</span>
+              <span className="text-gold">conversation.</span>
             </h2>
             <p className="text-mist text-lg leading-relaxed max-w-md mb-12">
               Every engagement begins with a confidential consultation. Tell us
