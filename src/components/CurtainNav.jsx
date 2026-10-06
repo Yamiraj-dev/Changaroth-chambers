@@ -49,7 +49,7 @@ export default function CurtainNav() {
           scrolled ? "py-4 bg-forest/80 backdrop-blur-md" : "py-6 bg-transparent"
         }`}
       >
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12 flex items-center justify-between">
+        <div className="px-6 md:px-12 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" onClick={(e) => { e.preventDefault(); handleNav("#hero"); }} className="group flex items-center gap-3 text-white group-hover:text-gold transition-colors">
             <NavMark />
