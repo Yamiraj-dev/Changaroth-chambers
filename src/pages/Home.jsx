@@ -8,6 +8,7 @@ import OurApproach from "@/components/OurApproach";
 import ClientSupport from "@/components/ClientSupport";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import OurLawyers from "@/components/team/OurLawyers";
 
 export default function Home() {
   const [loading, setLoading] = useState(!window.location.hash);
@@ -35,6 +36,7 @@ export default function Home() {
           <PracticeGrid />
           <OurApproach />
           <ClientSupport />
+          <OurLawyers />
           <ContactSection />
         </div>
         <Footer />
