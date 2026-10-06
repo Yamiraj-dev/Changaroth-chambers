@@ -5,7 +5,6 @@ import useCurrentUser from "@/hooks/useCurrentUser";
 
 const NAV_ITEMS = [
   { label: "Home", to: "#hero" },
-  { label: "Our Values", to: "#values" },
   { label: "Main Practices", to: "#practices" },
   { label: "Our Approach", to: "#approach" },
   { label: "Client Support", to: "#support" },

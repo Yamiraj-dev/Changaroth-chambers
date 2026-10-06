@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Loader from "@/components/Loader";
 import CurtainNav from "@/components/CurtainNav";
 import Hero from "@/components/Hero";
-import ValuePillars from "@/components/ValuePillars";
 import PracticeGrid from "@/components/PracticeGrid";
 import OurApproach from "@/components/OurApproach";
 import ClientSupport from "@/components/ClientSupport";
@@ -32,7 +31,6 @@ export default function Home() {
         {/* Gilded thread connecting sections */}
         <div className="relative">
           <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-gold/0 via-gold/20 to-gold/0 pointer-events-none" />
-          <ValuePillars />
           <PracticeGrid />
           <OurApproach />
           <ClientSupport />

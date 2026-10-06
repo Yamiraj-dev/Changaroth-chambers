@@ -60,7 +60,7 @@ export default function Hero() {
       {/* Scroll indicator */}
       <div className={`hidden md:block absolute bottom-6 left-1/2 -translate-x-1/2 z-30 transition-opacity duration-1000 ${mounted ? "opacity-100" : "opacity-0"}`} style={{ transitionDelay: "1000ms" }}>
         <button
-          onClick={() => document.querySelector("#values")?.scrollIntoView({ behavior: "smooth" })}
+          onClick={() => document.querySelector("#practices")?.scrollIntoView({ behavior: "smooth" })}
           className="flex flex-col items-center gap-2 animate-bounce text-gold hover:text-gold-light transition-colors"
           aria-label="Scroll to explore"
         >

@@ -41,6 +41,13 @@ const PRACTICES = [
       "Syariah-compliant transactions",
     ],
   },
+  {
+    n: "05",
+    title: "Commissioner for Oaths",
+    items: [
+      "Commissioned to administer oaths, affirmations, and statutory declarations with full legal authority and discretion.",
+    ],
+  },
 ];
 
 export default function PracticeGrid() {
@@ -61,7 +68,7 @@ export default function PracticeGrid() {
         </h2>
 
         {/* Asymmetrical 4-column grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-px bg-white/10">
           {PRACTICES.map((p) => (
             <div
               key={p.n}
