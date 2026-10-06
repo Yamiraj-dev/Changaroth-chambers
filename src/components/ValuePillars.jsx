@@ -41,10 +41,10 @@ export default function ValuePillars() {
         </div>
 
         {/* Heading — monolithic serif */}
-        <h2 className="font-display text-5xl md:text-7xl lg:text-8xl font-light leading-[1.05] tracking-tight text-balance mb-20 md:mb-32">
+        <h2 className="font-display text-5xl md:text-7xl lg:text-8xl font-light leading-[1.05] tracking-normal text-balance mb-20 md:mb-32" style={{ fontVariantLigatures: "none" }}>
           A firm defined by
           <br />
-          <span className="text-stroke-gold">discipline</span>, not decoration.
+          <span className="text-gold">discipline</span>, not decoration.
         </h2>
 
         {/* Two-column: professions on left, attributes on right */}
