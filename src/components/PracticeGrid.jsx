@@ -3,16 +3,6 @@ import React from "react";
 const PRACTICES = [
   {
     n: "01",
-    title: "Appropriate Dispute Resolution",
-    items: [
-      "Mediation & structured negotiation",
-      "Arbitration (domestic & international)",
-      "Early neutral evaluation",
-      "Conciliation and expert determination",
-    ],
-  },
-  {
-    n: "02",
     title: "Litigation — Civil & Criminal",
     items: [
       "Commercial & civil disputes",
@@ -22,7 +12,7 @@ const PRACTICES = [
     ],
   },
   {
-    n: "03",
+    n: "02",
     title: "General Counsel",
     items: [
       "Corporate & commercial advisory",
@@ -32,7 +22,7 @@ const PRACTICES = [
     ],
   },
   {
-    n: "04",
+    n: "03",
     title: "Syariah",
     items: [
       "Islamic finance structuring",
@@ -40,6 +30,12 @@ const PRACTICES = [
       "Wakaf and estate planning",
       "Syariah-compliant transactions",
     ],
+  },
+  {
+    n: "04",
+    title: "Commissioner for Oaths",
+    description: "Commissioned to administer oaths, affirmations, and statutory declarations with full legal authority and discretion.",
+    items: [],
   },
 ];
 
@@ -80,6 +76,7 @@ export default function PracticeGrid() {
 
               <div className="h-px w-8 bg-gold/30 mb-6 group-hover:w-16 transition-all duration-500" />
 
+              {p.description && <p className="text-mist text-sm leading-relaxed">{p.description}</p>}
               <ul className="space-y-3">
                 {p.items.map((item) => (
                   <li key={item} className="flex items-start gap-2 text-mist text-sm leading-relaxed">
