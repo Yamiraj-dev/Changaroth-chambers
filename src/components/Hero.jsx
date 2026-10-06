@@ -40,7 +40,7 @@ export default function Hero() {
           {/* Tagline */}
           <div className="max-w-xl">
             <p className="font-display text-2xl md:text-3xl font-light text-white leading-snug">
-              Locally Rooted —
+              Locally Rooted,
               <br />
               <span className="text-gold">Regionally Connected.</span>
             </p>
