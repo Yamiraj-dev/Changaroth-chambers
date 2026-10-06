@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Image } from "@/components/ui/image";
-
-const LOGO_URL = "https://media.base44.com/images/public/6a905eb7064e9f37b1446f75/5e7f6fcc3_IMG_5309.png";
+import HeroWordmark from "@/components/HeroWordmark";
 
 export default function Loader({ onComplete }) {
   const [progress, setProgress] = useState(0);
@@ -48,15 +46,8 @@ export default function Loader({ onComplete }) {
       </div>
 
       {/* Official logo — brand reveal */}
-      <div className="animate-fade-in bg-white rounded-sm border border-gold/15 p-5 sm:p-6 shadow-2xl shadow-black/50 w-[200px] sm:w-[230px]">
-        <Image
-          src={LOGO_URL}
-          alt="Changaroth Chambers"
-          fittingType="fit"
-          originWidth={1563}
-          originHeight={1563}
-          className="w-full"
-        />
+      <div className="mb-10 scale-75 sm:scale-90">
+        <HeroWordmark mounted />
       </div>
 
       {/* Counter */}
