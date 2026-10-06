@@ -4,7 +4,7 @@ import OfficialHeroMark from "@/components/OfficialHeroMark";
 export default function HeroWordmark({ mounted = false }) {
   return (
     <div
-      className={`relative flex w-[250px] sm:w-[290px] md:w-[320px] lg:w-[340px] select-none flex-col items-center transition-all duration-[1400ms] ease-out ${
+      className={`relative flex w-[375px] max-w-[85vw] sm:w-[435px] md:w-[480px] lg:w-[510px] max-h-[60vh] select-none flex-col items-center transition-all duration-[1400ms] ease-out ${
         mounted ? "opacity-100 scale-100" : "opacity-0 scale-95"
       }`}
       style={{ transitionDelay: "300ms" }}
