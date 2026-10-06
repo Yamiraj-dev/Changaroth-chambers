@@ -48,23 +48,11 @@ export default function Hero() {
 
           {/* Intro paragraph + CTA */}
           <div className="max-w-md md:text-right">
-            <p className="text-mist text-sm md:text-base leading-relaxed mb-6">
+            <p className="text-mist text-sm md:text-base leading-relaxed">
               Grounded in Brunei's legal tradition and committed to the rule of law,
               we engage in professional collaboration with regional counterparts to
               support ethical practice, legal development, and knowledge sharing.
             </p>
-            <button
-              onClick={() => {
-                const el = document.querySelector("#values");
-                if (el) el.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="group inline-flex items-center gap-3 border border-gold px-7 py-3 hover:bg-gold transition-all duration-500"
-            >
-              <span className="text-[10px] tracking-micro uppercase text-gold group-hover:text-forest transition-colors duration-500">
-                Learn More
-              </span>
-              <span className="w-6 h-px bg-gold group-hover:w-10 group-hover:bg-forest transition-all duration-500" />
-            </button>
           </div>
         </div>
       </div>
