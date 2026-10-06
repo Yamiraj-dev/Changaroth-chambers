@@ -146,6 +146,17 @@
 .rich-editor .ql-snow .ql-picker-options { background: #081A12; }
 .rich-editor .ql-snow button:hover .ql-stroke, .rich-editor .ql-snow .ql-active .ql-stroke { stroke: #D4AF37; }
 
+/* Readability boost — heavier, larger, higher-contrast slim text */
+.font-light, .font-extralight, .font-thin { font-weight: 400; }
+.text-\[9px\] { font-size: 12px; }
+.text-\[10px\] { font-size: 13px; }
+.text-\[11px\] { font-size: 14px; }
+.text-xs { font-size: 0.875rem; line-height: 1.5; }
+.text-mist\/40, .text-mist\/50, .text-mist\/60 { color: #A3B0AA; }
+.text-mist { color: #BCC7C1; }
+.tracking-micro { letter-spacing: 0.12em; }
+body { font-size: 1.0625rem; }
+
 /* Smooth, heavy scroll — momentum inertia */
 html {
   scroll-behavior: smooth;
