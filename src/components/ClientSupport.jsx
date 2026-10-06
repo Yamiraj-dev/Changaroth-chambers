@@ -24,7 +24,7 @@ const SERVICES = [
   },
 ];
 
-const IMAGE_URL = "https://media.base44.com/images/public/6a905eb7064e9f37b1446f75/350ca1376_generated_image.png";
+const IMAGE_URL = "https://media.base44.com/images/public/6a905eb7064e9f37b1446f75/63d7b5dc9_image.png";
 
 export default function ClientSupport() {
   return (
