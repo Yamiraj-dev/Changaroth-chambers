@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import Logo from "@/components/Logo";
+import NavMark from "@/components/NavMark";
 import useCurrentUser from "@/hooks/useCurrentUser";
 
 const NAV_ITEMS = [
@@ -52,7 +52,7 @@ export default function CurtainNav() {
         <div className="max-w-[1600px] mx-auto px-6 md:px-12 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" onClick={(e) => { e.preventDefault(); handleNav("#hero"); }} className="group flex items-center gap-3 text-white group-hover:text-gold transition-colors">
-            <Logo variant="compact" />
+            <NavMark />
           </Link>
 
           {/* Menu trigger — two gold lines */}
