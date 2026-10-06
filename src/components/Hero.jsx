@@ -58,11 +58,15 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className={`hidden md:block absolute bottom-6 left-1/2 -translate-x-1/2 transition-opacity duration-1000 ${mounted ? "opacity-60" : "opacity-0"}`} style={{ transitionDelay: "1000ms" }}>
-        <div className="flex flex-col items-center gap-2">
-          <span className="text-[9px] tracking-micro uppercase text-mist">Scroll</span>
-          <span className="w-px h-8 bg-gradient-to-b from-gold to-transparent animate-pulse" />
-        </div>
+      <div className={`hidden md:block absolute bottom-6 left-1/2 -translate-x-1/2 z-30 transition-opacity duration-1000 ${mounted ? "opacity-100" : "opacity-0"}`} style={{ transitionDelay: "1000ms" }}>
+        <button
+          onClick={() => document.querySelector("#values")?.scrollIntoView({ behavior: "smooth" })}
+          className="flex flex-col items-center gap-2 animate-bounce text-gold hover:text-gold-light transition-colors"
+          aria-label="Scroll to explore"
+        >
+          <span className="text-[11px] font-medium tracking-micro uppercase">Scroll to Explore</span>
+          <span className="w-px h-8 bg-gradient-to-b from-gold to-transparent" />
+        </button>
       </div>
     </section>
   );
