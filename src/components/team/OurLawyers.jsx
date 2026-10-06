@@ -1,5 +1,6 @@
 import React from "react";
 import LawyerCard from "@/components/team/LawyerCard";
+import RestOfTeam from "@/components/team/RestOfTeam";
 
 const BASE = "https://media.base44.com/images/public/6a905eb7064e9f37b1446f75/";
 const BIO = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.";
@@ -30,6 +31,7 @@ export default function OurLawyers() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-6 gap-y-12">
           {LAWYERS.map((l, i) => <LawyerCard key={l.name} lawyer={l} index={i} />)}
         </div>
+        <RestOfTeam />
       </div>
     </section>
   );
