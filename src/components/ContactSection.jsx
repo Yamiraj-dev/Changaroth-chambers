@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Instagram, Facebook, Linkedin } from "lucide-react";
+import { base44 } from "@/api/base44Client";
 
 export default function ContactSection() {
   const [form, setForm] = useState({ name: "", matter: "", contact: "" });
@@ -9,9 +10,22 @@ export default function ContactSection() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!form.name || !form.matter || !form.contact) return;
+    if (!form.name || !form.matter || !form.contact || sending) return;
+    setSending(true);
+    setError("");
+    try {
+      await base44.functions.invoke("requestConsultation", form);
+    } catch (err) {
+      setError("Could not send your request. Please try again or email us directly.");
+      setSending(false);
+      return;
+    }
+    setSending(false);
     setSent(true);
     setTimeout(() => {
       setSent(false);
@@ -151,9 +165,10 @@ export default function ContactSection() {
                 
                 <span className="absolute inset-0 bg-gold translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
                 <span className="relative font-display text-lg text-gold group-hover:text-forest transition-colors duration-500 tracking-wide">
-                  {sent ? "Request Received" : "Request Consultation"}
+                  {sent ? "Request Received" : sending ? "Sending..." : "Request Consultation"}
                 </span>
               </button>
+              {error && <p className="text-red-400 text-sm">{error}</p>}
               <p className="text-mist/60 text-xs leading-relaxed max-w-sm">
                 This website is intended for informational purposes only and does
                 not constitute legal advice. Submission of this form does not
