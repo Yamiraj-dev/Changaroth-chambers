@@ -39,14 +39,14 @@ export default function ClientSupport() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-stretch">
           {/* Left: image */}
-          <div className="relative min-h-[400px] lg:min-h-[560px] overflow-hidden">
+          <div className="relative aspect-[16/10] lg:aspect-auto lg:min-h-[560px] overflow-hidden">
             <img
               src={IMAGE_URL}
-              alt="Architectural detail in chiaroscuro light"
-              className="w-full h-full object-cover"
+              alt="Changaroth Chambers front desk with wall logo"
+              className="absolute inset-0 w-full h-full object-cover object-[25%_center]"
             />
             {/* Overlay tint */}
-            <div className="absolute inset-0 bg-gradient-to-t from-forest-deep via-forest/30 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/90 via-transparent to-transparent" />
             {/* Caption */}
             <div className="absolute bottom-8 left-8 right-8">
               <div className="w-12 h-px bg-gold mb-4" />
