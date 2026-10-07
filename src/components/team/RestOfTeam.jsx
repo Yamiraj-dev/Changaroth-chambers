@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import LawyerCard from "@/components/team/LawyerCard";
 
-const PLACEHOLDER = "https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=800&q=80";
-const STAFF = [1, 2, 3, 4, 5].map((n) => ({
-  name: `Team Member ${n}`,
-  role: "Staff",
-  image: PLACEHOLDER,
-  quote: "Lorem ipsum dolor sit amet.",
-  bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-}));
+const BASE = "https://media.base44.com/images/public/6a905eb7064e9f37b1446f75/";
+const STAFF = [
+  { name: "Izhar Rozaiman", image: BASE + "82d0584ff_izhar.jpg" },
+  { name: "Danish Haslan", image: BASE + "d5d70c728_danish.jpg" },
+  { name: "Adiva Alimmin", image: BASE + "030f7f8b1_adivaa.jpg" },
+  { name: "Zaim Adli", image: BASE + "60b01d493_zaim.jpg" },
+  { name: "Asyraf Ibrahim", image: BASE + "8b9e240db_asyraf.jpg" },
+].map((p) => ({ role: "Support Staff", bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", ...p }));
 
 export default function RestOfTeam() {
   const [open, setOpen] = useState(false);
