@@ -3,8 +3,8 @@ import HeroWordmark from "@/components/HeroWordmark";
 import { Link } from "react-router-dom";
 
 const AFFILIATIONS = [
-  { name: "Changaroth Chambers LLC", href: "https://www.changarothchambers.com", logo: "https://www.changarothchambers.com/img/logo.png" },
-  { name: "Commonwealth Lawyers Association", href: "https://www.commonwealthlawyers.com/", logo: "https://www.commonwealthlawyers.com/wp-content/uploads/2020/04/Commonwealth-lawyers-association-logo.svg" },
+  { name: "Changaroth Chambers LLC", href: "https://www.changarothchambers.com", logo: "https://base44.app/api/apps/6a905eb7064e9f37b1446f75/files/mp/public/6a905eb7064e9f37b1446f75/2c993025e_cc.png" },
+  { name: "Commonwealth Lawyers Association", href: "https://www.commonwealthlawyers.com/", logo: "https://base44.app/api/apps/6a905eb7064e9f37b1446f75/files/mp/public/6a905eb7064e9f37b1446f75/a02bdc178_cla.svg" },
 ];
 
 export default function Footer() {
@@ -49,9 +49,9 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={a.name}
-                className="flex items-center justify-center h-16 px-4 opacity-70 hover:opacity-100 transition-opacity"
+                className="flex items-center justify-center w-56 h-20 px-5 border border-gold/30 hover:border-gold transition-colors"
               >
-                <img src={a.logo} alt={a.name} className="max-h-full max-w-[220px] object-contain brightness-0 invert" />
+                <img src={a.logo} alt={a.name} className="h-12 w-full object-contain" />
               </a>
             ))}
           </div>
