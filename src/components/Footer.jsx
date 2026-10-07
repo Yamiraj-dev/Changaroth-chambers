@@ -2,6 +2,11 @@ import React from "react";
 import HeroWordmark from "@/components/HeroWordmark";
 import { Link } from "react-router-dom";
 
+const AFFILIATIONS = [
+  { name: "Changaroth Chambers LLC", href: "https://www.changarothchambers.com", logo: "https://www.changarothchambers.com/img/logo.png" },
+  { name: "Commonwealth Lawyers Association", href: "https://www.commonwealthlawyers.com/", logo: "https://www.commonwealthlawyers.com/wp-content/uploads/2022/02/cla-logo.svg" },
+];
+
 export default function Footer() {
   return (
     <footer className="relative bg-forest-deep pt-24 md:pt-32 pb-10 px-6 md:px-12 overflow-hidden border-t border-white/5">
@@ -31,6 +36,25 @@ export default function Footer() {
         {/* Landing logo */}
         <div className="flex justify-center mb-16">
           <HeroWordmark mounted />
+        </div>
+
+        {/* Affiliations */}
+        <div className="flex flex-col items-center mb-16">
+          <p className="text-[10px] tracking-micro uppercase text-gold mb-6">Affiliations</p>
+          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+            {AFFILIATIONS.map((a) => (
+              <a
+                key={a.name}
+                href={a.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={a.name}
+                className="flex items-center justify-center bg-hero-cream px-6 py-4 w-48 h-24 border border-gold/20 hover:border-gold transition-colors"
+              >
+                <img src={a.logo} alt={a.name} className="max-h-full max-w-full object-contain" />
+              </a>
+            ))}
+          </div>
         </div>
 
         {/* Bottom fine print */}
