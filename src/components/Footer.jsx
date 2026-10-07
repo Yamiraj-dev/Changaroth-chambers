@@ -12,7 +12,7 @@ export default function Footer() {
     <footer className="relative bg-forest-deep pt-24 md:pt-32 pb-10 px-6 md:px-12 overflow-hidden border-t border-white/5">
       <div className="max-w-[1600px] mx-auto">
         {/* Announcements strip */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-20 md:mb-32 pb-12 border-b border-white/10">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-12 md:mb-16 pb-12 border-b border-white/10">
           <div>
             <p className="text-[10px] tracking-micro uppercase text-gold mb-2">
               Announcements, Insights and Publications
