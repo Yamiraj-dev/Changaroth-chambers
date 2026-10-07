@@ -97,8 +97,11 @@ export default function ContactSection() {
               </div>
               {/* Social */}
               <div className="flex items-center gap-5 pt-2">
-                {[Instagram, Facebook, Linkedin].map((Icon, i) =>
-                <a key={i} href="#" className="text-mist hover:text-gold transition-colors" aria-label="Social">
+                {[
+                  { Icon: Instagram, href: "https://www.instagram.com/changarothchambers_bn", label: "Instagram" },
+                  { Icon: Linkedin, href: "https://bn.linkedin.com/company/changarothchambersbrunei", label: "LinkedIn" },
+                ].map(({ Icon, href, label }) =>
+                <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="text-mist hover:text-gold transition-colors" aria-label={label}>
                     <Icon className="w-5 h-5" strokeWidth={1.5} />
                   </a>
                 )}
