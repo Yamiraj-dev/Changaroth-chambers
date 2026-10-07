@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative h-[100svh] min-h-[560px] md:h-screen md:min-h-[700px] w-full overflow-hidden bg-forest-deep flex items-start md:items-center justify-center"
+      className="relative min-h-[100svh] md:h-screen md:min-h-[700px] w-full overflow-hidden bg-forest-deep flex flex-col md:flex-row md:items-center justify-center pt-36 pb-10 md:p-0"
     >
       <HeroAtmosphere />
 
@@ -21,7 +21,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-grain opacity-40" />
 
       {/* Stacked wordmark, centered as the hero mark */}
-      <h1 className="absolute left-0 right-0 top-1/2 -translate-y-1/2 md:relative md:top-auto md:translate-y-0 z-20 md:-mt-10 flex items-center justify-center">
+      <h1 className="relative flex-1 z-20 md:-mt-10 flex items-center justify-center">
         <HeroWordmark mounted={mounted} />
         <span className="sr-only">Changaroth Chambers — Brunei Darussalam</span>
       </h1>
@@ -35,7 +35,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom content */}
-      <div className={`absolute bottom-10 md:bottom-16 left-0 right-0 px-6 md:px-12 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: "600ms" }}>
+      <div className={`relative mt-10 md:mt-0 md:absolute md:bottom-16 left-0 right-0 px-6 md:px-12 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: "600ms" }}>
         <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row md:items-end md:justify-between gap-8">
           {/* Tagline */}
           <div className="max-w-xl">
