@@ -114,7 +114,7 @@ export default function CurtainNav() {
           <div className="mt-16 flex items-center gap-4">
             <span className="w-12 h-px bg-gold/40" />
             <span className="text-[10px] tracking-micro uppercase text-mist">
-              Locally Rooted — Regionally Connected
+              Rights Respected, Disputes Resolved.
             </span>
             {isAdmin && (
               <button onClick={() => handleNav("/admin")} className="ml-auto text-[10px] tracking-micro uppercase text-gold hover:text-gold-light">
