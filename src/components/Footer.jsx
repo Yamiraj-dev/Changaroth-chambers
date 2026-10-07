@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const AFFILIATIONS = [
   { name: "Changaroth Chambers LLC", href: "https://www.changarothchambers.com", logo: "https://www.changarothchambers.com/img/logo.png" },
-  { name: "Commonwealth Lawyers Association", href: "https://www.commonwealthlawyers.com/", logo: "https://www.commonwealthlawyers.com/wp-content/uploads/2022/02/cla-logo.svg" },
+  { name: "Commonwealth Lawyers Association", href: "https://www.commonwealthlawyers.com/", logo: "https://www.commonwealthlawyers.com/wp-content/uploads/2020/04/Commonwealth-lawyers-association-logo.svg" },
 ];
 
 export default function Footer() {
@@ -41,7 +41,7 @@ export default function Footer() {
         {/* Affiliations */}
         <div className="flex flex-col items-center mb-16">
           <p className="text-[10px] tracking-micro uppercase text-gold mb-6">Affiliations</p>
-          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16">
             {AFFILIATIONS.map((a) => (
               <a
                 key={a.name}
@@ -49,9 +49,9 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={a.name}
-                className="flex items-center justify-center bg-hero-cream px-6 py-4 w-48 h-24 border border-gold/20 hover:border-gold transition-colors"
+                className="flex items-center justify-center h-16 px-4 opacity-70 hover:opacity-100 transition-opacity"
               >
-                <img src={a.logo} alt={a.name} className="max-h-full max-w-full object-contain" />
+                <img src={a.logo} alt={a.name} className="max-h-full max-w-[220px] object-contain brightness-0 invert" />
               </a>
             ))}
           </div>
