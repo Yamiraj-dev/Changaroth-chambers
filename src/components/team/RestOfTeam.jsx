@@ -3,11 +3,11 @@ import LawyerCard from "@/components/team/LawyerCard";
 
 const BASE = "https://media.base44.com/images/public/6a905eb7064e9f37b1446f75/";
 const STAFF = [
-  { name: "Izhar Rozaiman", image: BASE + "82d0584ff_izhar.jpg" },
-  { name: "Danish Haslan", image: BASE + "d5d70c728_danish.jpg" },
-  { name: "Adiva Alimmin", image: BASE + "030f7f8b1_adivaa.jpg" },
-  { name: "Zaim Adli", image: BASE + "60b01d493_zaim.jpg" },
-  { name: "Asyraf Ibrahim", image: BASE + "8b9e240db_asyraf.jpg" },
+  { name: "Izhar Rozaiman", role: "Legal Officer", image: BASE + "82d0584ff_izhar.jpg" },
+  { name: "Danish Haslan", role: "Process Server", image: BASE + "d5d70c728_danish.jpg" },
+  { name: "Adiva Alimmin", role: "Paralegal", image: BASE + "030f7f8b1_adivaa.jpg" },
+  { name: "Zaim Adli", role: "Paralegal", image: BASE + "60b01d493_zaim.jpg" },
+  { name: "Asyraf Ibrahim", role: "Pupil", image: BASE + "8b9e240db_asyraf.jpg" },
 ].map((p) => ({ role: "Support Staff", bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", ...p }));
 
 export default function RestOfTeam() {
