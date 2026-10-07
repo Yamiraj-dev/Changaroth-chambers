@@ -21,7 +21,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-grain opacity-40" />
 
       {/* Stacked wordmark, centered as the hero mark */}
-      <h1 className="relative z-20 mt-32 md:mt-0 md:-mt-10 flex items-center justify-center">
+      <h1 className="absolute left-0 right-0 top-[47%] -translate-y-1/2 md:relative md:top-auto md:translate-y-0 z-20 md:-mt-10 flex items-center justify-center">
         <HeroWordmark mounted={mounted} />
         <span className="sr-only">Changaroth Chambers — Brunei Darussalam</span>
       </h1>
