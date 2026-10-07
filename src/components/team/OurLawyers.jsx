@@ -11,7 +11,13 @@ const LAWYERS = [
   { name: "Lenny Rahman", role: "Principal", image: BASE + "f2d16fd32_LR.jpg" },
   { name: "Miza Musa", image: BASE + "911a8ea8e_miza.jpg" },
   { name: "Zunorin Rahman", role: "Syarie Counsel", image: BASE + "39e478dc1_zunorin.jpg" },
-  { name: "Izzatul Mohaimin", image: BASE + "a1afc7841_izzatul.jpg" },
+  {
+    name: "Izzatul Mohaimin",
+    image: BASE + "a1afc7841_izzatul.jpg",
+    practice: "Civil Litigation",
+    education: "Cardiff University",
+    bio: "Called to the Bar by the Honourable Society of Middle Temple in November 2023 and admitted as an Advocate and Solicitor of the Supreme Court of Brunei Darussalam in February 2025.",
+  },
   { name: "Rulzaimi Ramlee", image: BASE + "ead667abf_zaimi.jpg" },
   { name: "Ahmad Zahid Borhan", image: BASE + "60f739837_zahid.jpg" },
 ].map((l) => ({ role: "Associate", quote: QUOTE, bio: BIO, ...l }));

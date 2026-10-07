@@ -24,7 +24,9 @@ export default function LawyerCard({ lawyer, index }) {
         <blockquote className="font-display italic text-sm text-hero-cream/90 leading-snug">
           “{lawyer.quote}”
         </blockquote>
-        <p className="mt-2 text-mist text-xs leading-relaxed line-clamp-3">{lawyer.bio}</p>
+        {lawyer.practice && <p className="mt-3 text-xs text-hero-cream"><span className="text-gold">Practice:</span> {lawyer.practice}</p>}
+        {lawyer.education && <p className="mt-1 text-xs text-hero-cream"><span className="text-gold">Education:</span> {lawyer.education}</p>}
+        <p className={`mt-2 text-mist text-xs leading-relaxed ${lawyer.practice ? "" : "line-clamp-3"}`}>{lawyer.bio}</p>
       </div>
     </article>
   );
