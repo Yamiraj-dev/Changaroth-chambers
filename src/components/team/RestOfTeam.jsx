@@ -13,7 +13,7 @@ const STAFF = [1, 2, 3, 4, 5].map((n) => ({
 export default function RestOfTeam() {
   const [open, setOpen] = useState(false);
   return (
-    <div className="mt-14">
+    <div className="mt-14 lg:mt-6">
       <div className="flex justify-center">
         <button
           onClick={() => setOpen(!open)}
@@ -27,7 +27,7 @@ export default function RestOfTeam() {
       </div>
       <div className={`grid transition-all duration-700 ${open ? "grid-rows-[1fr] opacity-100 mt-14" : "grid-rows-[0fr] opacity-0"}`}>
         <div className="overflow-hidden">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10 lg:gap-y-8">
             {STAFF.map((p, i) => <LawyerCard key={p.name} lawyer={p} index={i + 6} />)}
           </div>
         </div>

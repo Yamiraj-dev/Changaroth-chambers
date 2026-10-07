@@ -3,8 +3,8 @@ import { Image } from "@/components/ui/image";
 
 export default function LawyerCard({ lawyer, index }) {
   return (
-    <article className="group">
-      <div className="relative overflow-hidden border border-gold/20 bg-forest-light">
+    <article className="group flex gap-5 items-start">
+      <div className="relative overflow-hidden border border-gold/20 bg-forest-light w-32 sm:w-36 lg:w-28 xl:w-32 shrink-0">
         <Image
           src={lawyer.image}
           alt={`Portrait of ${lawyer.name}`}
@@ -17,7 +17,7 @@ export default function LawyerCard({ lawyer, index }) {
           {String(index + 1).padStart(2, "0")}
         </span>
       </div>
-      <div className="pt-4">
+      <div className="min-w-0">
         <h3 className="font-display text-xl xl:text-2xl text-hero-cream">{lawyer.name}</h3>
         <p className="mt-1 text-[10px] tracking-micro uppercase text-gold">{lawyer.role}</p>
         <span className="block w-8 h-px bg-gold/50 my-3" />
