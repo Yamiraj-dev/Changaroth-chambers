@@ -3,8 +3,8 @@ import HeroWordmark from "@/components/HeroWordmark";
 import { Link } from "react-router-dom";
 
 const AFFILIATIONS = [
-  { name: "Changaroth Chambers LLC", href: "https://www.changarothchambers.com", logo: "https://base44.app/api/apps/6a905eb7064e9f37b1446f75/files/mp/public/6a905eb7064e9f37b1446f75/2c993025e_cc.png" },
-  { name: "Commonwealth Lawyers Association", href: "https://www.commonwealthlawyers.com/", logo: "https://base44.app/api/apps/6a905eb7064e9f37b1446f75/files/mp/public/6a905eb7064e9f37b1446f75/a02bdc178_cla.svg" },
+  { name: "Changaroth Chambers LLC", href: "https://www.changarothchambers.com", logo: "https://base44.app/api/apps/6a905eb7064e9f37b1446f75/files/mp/public/6a905eb7064e9f37b1446f75/2c993025e_cc.png", bg: "bg-white" },
+  { name: "Commonwealth Lawyers Association", href: "https://www.commonwealthlawyers.com/", logo: "https://base44.app/api/apps/6a905eb7064e9f37b1446f75/files/mp/public/6a905eb7064e9f37b1446f75/a02bdc178_cla.svg", bg: "bg-[#2B1B4E]" },
 ];
 
 export default function Footer() {
@@ -39,7 +39,7 @@ export default function Footer() {
         </div>
 
         {/* Affiliations */}
-        <div className="flex flex-col items-center mb-16">
+        <div className="flex flex-col items-center text-center mx-auto w-full mb-16">
           <p className="text-[10px] tracking-micro uppercase text-gold mb-6">Affiliations</p>
           <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16">
             {AFFILIATIONS.map((a) => (
@@ -49,9 +49,9 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={a.name}
-                className="flex items-center justify-center w-56 h-20 px-5 border border-gold/30 hover:border-gold transition-colors"
+                className={`flex items-center justify-center w-72 h-28 px-6 py-4 border border-gold/30 hover:border-gold transition-colors ${a.bg}`}
               >
-                <img src={a.logo} alt={a.name} className="h-12 w-full object-contain" />
+                <img src={a.logo} alt={a.name} className="h-full w-full object-contain" />
               </a>
             ))}
           </div>
