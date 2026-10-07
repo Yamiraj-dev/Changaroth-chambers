@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative h-[100svh] md:h-screen md:min-h-[700px] w-full overflow-hidden bg-forest-deep flex items-start md:items-center justify-center"
+      className="relative h-screen min-h-[700px] w-full overflow-hidden bg-forest-deep flex items-start md:items-center justify-center"
     >
       <HeroAtmosphere />
 
@@ -21,7 +21,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-grain opacity-40" />
 
       {/* Stacked wordmark, centered as the hero mark */}
-      <h1 className="absolute left-0 right-0 top-1/2 -translate-y-1/2 md:relative md:top-auto md:translate-y-0 z-20 md:-mt-10 flex items-center justify-center">
+      <h1 className="absolute left-0 right-0 top-[47%] -translate-y-1/2 md:relative md:top-auto md:translate-y-0 z-20 md:-mt-10 flex items-center justify-center">
         <HeroWordmark mounted={mounted} />
         <span className="sr-only">Changaroth Chambers — Brunei Darussalam</span>
       </h1>

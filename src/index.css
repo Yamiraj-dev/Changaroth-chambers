@@ -118,7 +118,7 @@
   }
   @media (max-width: 767px) {
     .hero-atmosphere-glow {
-      background: radial-gradient(circle 60vw at 50% 50%, rgb(var(--hero-cream) / 0.13) 0%, rgb(var(--hero-bar) / 0.08) 38%, transparent 76%);
+      background: radial-gradient(circle 60vw at 50% 47%, rgb(var(--hero-cream) / 0.13) 0%, rgb(var(--hero-bar) / 0.08) 38%, transparent 76%);
     }
   }
   .hero-atmosphere-fade {
