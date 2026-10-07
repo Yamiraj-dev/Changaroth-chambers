@@ -12,32 +12,28 @@ const LAWYERS = [
     name: "Miza Musa",
     image: BASE + "911a8ea8e_miza.jpg",
     practice: "Civil Litigation, Debt Recovery, Personal Injury",
-    education: "Sultan Sharif Ali Islamic University, LLB & BSL (2022)",
-    bio: "Admitted as an Advocate and Solicitor of the Supreme Court of Brunei Darussalam on 18 April 2024.",
+    education: "Sultan Sharif Ali Islamic University, LLB & BSL",
   },
   { name: "Zunorin Rahman", role: "Syarie Counsel", image: BASE + "39e478dc1_zunorin.jpg" },
   {
     name: "Izzatul Mohaimin",
     image: BASE + "a1afc7841_izzatul.jpg",
     practice: "Civil Litigation",
-    education: "Cardiff University",
-    bio: "Called to the Bar by the Honourable Society of Middle Temple in November 2023 and admitted as an Advocate and Solicitor of the Supreme Court of Brunei Darussalam in February 2025.",
+    education: "Cardiff University, LLB (Hons)",
   },
   {
     name: "Rulzaimi Ramlee",
     image: BASE + "ead667abf_zaimi.jpg",
     practice: "Criminal Litigation, Civil Litigation, Personal Injury",
     education: "The University of Manchester, LLB (Hons)",
-    bio: "Called to the Bar by the Honourable Society of Middle Temple in November 2023 and admitted as an Advocate and Solicitor of the Supreme Court of Brunei Darussalam in February 2025.",
   },
   {
     name: "Ahmad Zahid Borhan",
     image: BASE + "60f739837_zahid.jpg",
     practice: "Criminal Litigation, Civil Litigation, Debt Recovery",
-    education: "Sultan Sharif Ali Islamic University, LLB & BSL (2025), Minor in ICT",
-    bio: "Admitted as an Advocate and Solicitor of the Supreme Court of Brunei Darussalam on 11 July 2026.",
+    education: "Sultan Sharif Ali Islamic University, LLB & BSL, Minor in ICT",
   },
-].map((l) => ({ role: "Associate", bio: BIO, ...l }));
+].map((l) => ({ role: "Associate", bio: l.practice ? "" : BIO, ...l }));
 
 export default function OurLawyers() {
   return (
