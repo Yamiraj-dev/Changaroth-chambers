@@ -8,7 +8,7 @@ export default function LawyerCard({ lawyer, index }) {
         <Image
           src={lawyer.image}
           alt={`Portrait of ${lawyer.name}`}
-          className="block w-full aspect-[4/5] grayscale-[35%] group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-700"
+          className="block w-full aspect-[4/5]"
           focalPointX={0.5}
           focalPointY={0.3}
         />
