@@ -3,8 +3,8 @@ import { Image } from "@/components/ui/image";
 
 export default function LawyerCard({ lawyer, index }) {
   return (
-    <article className="group flex gap-5 items-start">
-      <div className="relative overflow-hidden border border-gold/20 bg-forest-light w-36 sm:w-40 lg:w-36 xl:w-44 shrink-0">
+    <article className="group flex gap-4 sm:gap-5 items-start">
+      <div className="relative overflow-hidden border border-gold/20 bg-forest-light w-28 sm:w-40 lg:w-36 xl:w-44 shrink-0">
         <Image
           src={lawyer.image}
           alt={`Portrait of ${lawyer.name}`}
@@ -13,7 +13,7 @@ export default function LawyerCard({ lawyer, index }) {
           focalPointY={0.3}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/80 via-transparent to-transparent pointer-events-none" />
-        <span className="absolute top-4 left-4 font-display italic text-gold text-sm">
+        <span className="absolute top-2 left-2 sm:top-4 sm:left-4 font-display italic text-gold text-sm">
           {String(index + 1).padStart(2, "0")}
         </span>
       </div>
@@ -23,7 +23,7 @@ export default function LawyerCard({ lawyer, index }) {
         <span className="block w-8 h-px bg-gold/50 my-3" />
         {lawyer.practice && <p className="text-xs text-hero-cream"><span className="text-gold">Practice:</span> {lawyer.practice}</p>}
         {lawyer.education && <p className="mt-1 text-xs text-hero-cream"><span className="text-gold">Education:</span> {lawyer.education}</p>}
-        <p className={`mt-2 text-mist text-xs leading-relaxed ${lawyer.practice ? "line-clamp-3 2xl:line-clamp-4" : "line-clamp-5"}`}>{lawyer.bio}</p>
+        <p className={`mt-2 text-mist text-xs leading-relaxed ${lawyer.practice ? "md:line-clamp-3 2xl:line-clamp-4" : "md:line-clamp-5"}`}>{lawyer.bio}</p>
       </div>
     </article>
   );

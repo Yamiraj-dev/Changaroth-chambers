@@ -28,10 +28,10 @@ const IMAGE_URL = "https://media.base44.com/images/public/6a905eb7064e9f37b1446f
 
 export default function ClientSupport() {
   return (
-    <section id="support" className="relative bg-forest-light py-24 md:py-40 px-6 md:px-12 overflow-hidden">
+    <section id="support" className="relative bg-forest-light py-16 md:py-40 px-6 md:px-12 overflow-hidden scroll-mt-20">
       <div className="max-w-[1600px] mx-auto">
         {/* Section label */}
-        <div className="flex items-center gap-4 mb-16 md:mb-24">
+        <div className="flex items-center gap-4 mb-10 md:mb-24">
           <span className="font-display italic text-gold text-sm">04</span>
           <span className="w-12 h-px bg-gold/40" />
           <span className="text-[11px] tracking-micro uppercase text-mist">Client Support</span>
@@ -58,7 +58,7 @@ export default function ClientSupport() {
 
           {/* Right: services list */}
           <div className="flex flex-col justify-center">
-            <h2 className="font-display text-4xl md:text-6xl font-light leading-tight tracking-tight mb-12">
+            <h2 className="font-display text-4xl md:text-6xl font-light leading-tight tracking-tight mb-8 md:mb-12">
               We carry the matter
               <br />
               <span className="text-gold">end to end.</span>
@@ -67,7 +67,7 @@ export default function ClientSupport() {
               {SERVICES.map(({ icon: Icon, title, desc }) => (
                 <div
                   key={title}
-                  className="bg-forest-light p-6 md:p-8 group flex items-start gap-6 hover:bg-forest transition-colors duration-500"
+                  className="bg-forest-light py-6 px-0 md:p-8 group flex items-start gap-4 md:gap-6 hover:bg-forest transition-colors duration-500"
                 >
                   <Icon className="w-7 h-7 text-gold flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-500" strokeWidth={1.25} />
                   <div>

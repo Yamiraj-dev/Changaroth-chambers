@@ -41,7 +41,7 @@ const LAWYERS = [
 
 export default function OurLawyers() {
   return (
-    <section id="team" className="relative bg-forest-deep py-24 lg:pt-24 lg:pb-10 px-6 md:px-12 lg:min-h-screen lg:flex lg:items-center">
+    <section id="team" className="relative bg-forest-deep py-16 scroll-mt-20 lg:pt-24 lg:pb-10 px-6 md:px-12 lg:min-h-screen lg:flex lg:items-center">
       <div className="max-w-[1600px] mx-auto w-full">
         <div className="flex items-center gap-4 mb-8 lg:mb-4">
           <span className="font-display italic text-gold text-sm">03</span>

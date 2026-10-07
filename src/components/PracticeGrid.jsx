@@ -52,16 +52,16 @@ const PRACTICES = [
 
 export default function PracticeGrid() {
   return (
-    <section id="practices" className="relative bg-forest-deep py-24 md:py-40 px-6 md:px-12">
+    <section id="practices" className="relative bg-forest-deep py-16 md:py-40 px-6 md:px-12 scroll-mt-20">
       <div className="max-w-[1600px] mx-auto">
         {/* Section label */}
-        <div className="flex items-center gap-4 mb-16 md:mb-24">
+        <div className="flex items-center gap-4 mb-10 md:mb-24">
           <span className="font-display italic text-gold text-sm">01</span>
           <span className="w-12 h-px bg-gold/40" />
           <span className="text-[11px] tracking-micro uppercase text-mist">Main Practices</span>
         </div>
 
-        <h2 className="font-display text-5xl md:text-7xl lg:text-8xl font-light leading-[1.05] tracking-tight text-balance mb-16 md:mb-24">
+        <h2 className="font-display text-5xl md:text-7xl lg:text-8xl font-light leading-[1.05] tracking-tight text-balance mb-10 md:mb-24">
           Areas of
           <br />
           <span className="text-gold">practice.</span>
@@ -72,12 +72,12 @@ export default function PracticeGrid() {
           {PRACTICES.map((p) => (
             <div
               key={p.n}
-              className="group bg-forest-deep p-8 md:p-10 hover:bg-forest-light transition-colors duration-500 relative cursor-pointer"
+              className="group bg-forest-deep py-8 px-1 md:p-10 hover:bg-forest-light transition-colors duration-500 relative cursor-pointer"
             >
               {/* Gold top border */}
               <div className="absolute top-0 left-0 right-0 h-px bg-gold/30 group-hover:bg-gold transition-colors duration-500" />
 
-              <span className="font-display italic text-gold text-lg block mb-12 transition-transform duration-500 group-hover:-translate-y-2">
+              <span className="font-display italic text-gold text-lg block mb-4 md:mb-12 transition-transform duration-500 group-hover:-translate-y-2">
                 {p.n}
               </span>
 
