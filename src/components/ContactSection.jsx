@@ -92,7 +92,7 @@ export default function ContactSection() {
                 <div className="text-mist text-sm grid grid-cols-[max-content_1fr] gap-x-6 gap-y-1">
                   <span>Mon - Thu</span><span>8:30 — 16:30</span>
                   <span>Fri</span><span>8:30 — 16:30 (closed for Friday prayers)</span>
-                  <span>Sat -Sun</span><span>Closed</span>
+                  <span>Sat - Sun</span><span>Closed</span>
                 </div>
               </div>
               {/* Social */}
