@@ -4,7 +4,6 @@ import RestOfTeam from "@/components/team/RestOfTeam";
 
 const BASE = "https://media.base44.com/images/public/6a905eb7064e9f37b1446f75/";
 const BIO = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.";
-const QUOTE = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
 
 // Update each lawyer's role, quote and bio here.
 const LAWYERS = [
@@ -20,7 +19,7 @@ const LAWYERS = [
   },
   { name: "Rulzaimi Ramlee", image: BASE + "ead667abf_zaimi.jpg" },
   { name: "Ahmad Zahid Borhan", image: BASE + "60f739837_zahid.jpg" },
-].map((l) => ({ role: "Associate", quote: QUOTE, bio: BIO, ...l }));
+].map((l) => ({ role: "Associate", bio: BIO, ...l }));
 
 export default function OurLawyers() {
   return (

@@ -4,7 +4,7 @@ import { Image } from "@/components/ui/image";
 export default function LawyerCard({ lawyer, index }) {
   return (
     <article className="group flex gap-5 items-start">
-      <div className="relative overflow-hidden border border-gold/20 bg-forest-light w-32 sm:w-36 lg:w-28 xl:w-32 shrink-0">
+      <div className="relative overflow-hidden border border-gold/20 bg-forest-light w-36 sm:w-40 lg:w-36 xl:w-44 shrink-0">
         <Image
           src={lawyer.image}
           alt={`Portrait of ${lawyer.name}`}
@@ -21,12 +21,9 @@ export default function LawyerCard({ lawyer, index }) {
         <h3 className="font-display text-xl xl:text-2xl text-hero-cream">{lawyer.name}</h3>
         <p className="mt-1 text-[10px] tracking-micro uppercase text-gold">{lawyer.role}</p>
         <span className="block w-8 h-px bg-gold/50 my-3" />
-        <blockquote className="font-display italic text-sm text-hero-cream/90 leading-snug">
-          “{lawyer.quote}”
-        </blockquote>
-        {lawyer.practice && <p className="mt-3 text-xs text-hero-cream"><span className="text-gold">Practice:</span> {lawyer.practice}</p>}
+        {lawyer.practice && <p className="text-xs text-hero-cream"><span className="text-gold">Practice:</span> {lawyer.practice}</p>}
         {lawyer.education && <p className="mt-1 text-xs text-hero-cream"><span className="text-gold">Education:</span> {lawyer.education}</p>}
-        <p className={`mt-2 text-mist text-xs leading-relaxed ${lawyer.practice ? "" : "line-clamp-3"}`}>{lawyer.bio}</p>
+        <p className={`mt-2 text-mist text-xs leading-relaxed ${lawyer.practice ? "line-clamp-3 2xl:line-clamp-4" : "line-clamp-5"}`}>{lawyer.bio}</p>
       </div>
     </article>
   );
