@@ -90,17 +90,17 @@ export default function ContactSection() {
               <div>
                 <p className="text-[10px] tracking-micro uppercase text-gold mb-2">Office Hours</p>
                 <div className="text-mist text-sm grid grid-cols-[max-content_1fr] gap-x-6 gap-y-1">
-                  <span>Mon – Thu</span><span>8:30 — 16:30</span>
+                  <span>Mon –Thu</span><span>8:30 — 16:30</span>
                   <span>Fri</span><span>8:30 — 16:30 (closed for Friday prayers)</span>
-                  <span>Sat — Sun</span><span>Closed</span>
+                  <span>Sat -Sun</span><span>Closed</span>
                 </div>
               </div>
               {/* Social */}
               <div className="flex items-center gap-5 pt-2">
                 {[
-                  { Icon: Instagram, href: "https://www.instagram.com/changarothchambers_bn", label: "Instagram" },
-                  { Icon: Linkedin, href: "https://bn.linkedin.com/company/changarothchambersbrunei", label: "LinkedIn" },
-                ].map(({ Icon, href, label }) =>
+                { Icon: Instagram, href: "https://www.instagram.com/changarothchambers_bn", label: "Instagram" },
+                { Icon: Linkedin, href: "https://bn.linkedin.com/company/changarothchambersbrunei", label: "LinkedIn" }].
+                map(({ Icon, href, label }) =>
                 <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="text-mist hover:text-gold transition-colors" aria-label={label}>
                     <Icon className="w-5 h-5" strokeWidth={1.5} />
                   </a>
