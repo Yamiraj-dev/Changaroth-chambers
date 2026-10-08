@@ -35,8 +35,10 @@ export default function Footer() {
           </button>
         </div>
 
-        <LatestAnnouncements />
-        <LatestEvents />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-12 md:mb-16 pb-12 border-b border-white/10">
+          <LatestAnnouncements />
+          <LatestEvents />
+        </div>
 
         {/* Landing logo */}
         <div className="flex justify-center mb-16">

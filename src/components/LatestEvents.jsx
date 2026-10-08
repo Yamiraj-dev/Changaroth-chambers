@@ -1,7 +1,7 @@
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import { base44 } from "@/api/base44Client";
-import EventCard from "@/components/events/EventCard";
+import EventFeedItem from "@/components/events/EventFeedItem";
 import HomeFeedSection from "@/components/HomeFeedSection";
 
 export default function LatestEvents() {
@@ -10,11 +10,9 @@ export default function LatestEvents() {
     queryFn: () => base44.entities.Event.filter({ status: "published" }, "-event_date", 3),
   });
 
-  if (!events.length) return null;
-
   return (
     <HomeFeedSection eyebrow="Events" title="Latest events." to="/events" cta="Explore more of our events">
-      {events.map((e) => <EventCard key={e.id} event={e} />)}
+      {events.length ? events.map((e) => <EventFeedItem key={e.id} event={e} />) : <p className="text-mist text-sm">No events yet.</p>}
     </HomeFeedSection>
   );
 }
