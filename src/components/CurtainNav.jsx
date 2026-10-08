@@ -4,7 +4,7 @@ import NavMark from "@/components/NavMark";
 import useCurrentUser from "@/hooks/useCurrentUser";
 
 const NAV_ITEMS = [
-  { label: "Home", to: "#hero" },
+  { label: "Home", to: "/home" },
   { label: "Areas of Practice", to: "#practices" },
   { label: "How We Practice", to: "#approach" },
   { label: "Our Lawyers", to: "#team" },
@@ -35,8 +35,10 @@ export default function CurtainNav() {
   const handleNav = (to) => {
     setOpen(false);
     setTimeout(() => {
+      const onHome = pathname === "/" || pathname === "/home";
+      if (to === "/home" && onHome) { navigate("/home"); return window.scrollTo({ top: 0, behavior: "smooth" }); }
       if (to.startsWith("/")) return navigate(to);
-      if (pathname !== "/") return navigate("/" + to);
+      if (!onHome) return navigate("/home" + to);
       const el = document.querySelector(to);
       if (el) el.scrollIntoView({ behavior: "smooth" });
     }, 350);
@@ -52,7 +54,7 @@ export default function CurtainNav() {
       >
         <div className="px-6 md:px-12 flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" onClick={(e) => { e.preventDefault(); handleNav("#hero"); }} className="group flex items-center gap-3 text-white group-hover:text-gold transition-colors">
+          <Link to="/home" onClick={(e) => { e.preventDefault(); handleNav("/home"); }} className="group flex items-center gap-3 text-white group-hover:text-gold transition-colors">
             <NavMark />
           </Link>
 
