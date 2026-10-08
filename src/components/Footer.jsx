@@ -1,6 +1,7 @@
 import React from "react";
 import HeroWordmark from "@/components/HeroWordmark";
 import { Link } from "react-router-dom";
+import LatestAnnouncements from "@/components/LatestAnnouncements";
 
 const AFFILIATIONS = [
   { name: "Changaroth Chambers LLC", href: "https://www.changarothchambers.com", logo: "https://base44.app/api/apps/6a905eb7064e9f37b1446f75/files/mp/public/6a905eb7064e9f37b1446f75/2c993025e_cc.png", bg: "bg-white" },
@@ -32,6 +33,8 @@ export default function Footer() {
             <span className="w-10 h-px bg-gold group-hover:w-16 transition-all duration-500" />
           </button>
         </div>
+
+        <LatestAnnouncements />
 
         {/* Landing logo */}
         <div className="flex justify-center mb-16">
