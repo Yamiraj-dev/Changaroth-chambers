@@ -7,7 +7,13 @@ const BIO = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiu
 
 // Update each lawyer's role, quote and bio here.
 const LAWYERS = [
-  { name: "Lenny Rahman", role: "Principal", image: BASE + "f2d16fd32_LR.jpg" },
+  {
+    name: "Lenny Rahman",
+    role: "Principal",
+    image: BASE + "f2d16fd32_LR.jpg",
+    practice: "Criminal Litigation, Civil Litigation, Commercial, ADR Specialist",
+    education: "International Islamic University Malaysia, LLB",
+  },
   {
     name: "Miza Musa",
     image: BASE + "911a8ea8e_miza.jpg",
