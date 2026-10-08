@@ -34,7 +34,7 @@ export default function AdminEvents() {
 
   return (
     <PageShell>
-      <PageHeader eyebrow="Publishing" title="Events" description="Upload, publish and archive event posters.">
+      <PageHeader eyebrow="Admin Panel" title="Events" description="Upload, publish and archive event posters.">
         <div className="flex flex-wrap gap-6 items-center self-start">
           <AdminSwitch />
           <Link to="/admin/events/new" className="inline-flex items-center gap-2 px-6 py-3 bg-gold text-forest text-[10px] tracking-micro uppercase hover:bg-gold-light transition-colors">

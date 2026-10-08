@@ -31,7 +31,7 @@ export default function AdminArticles() {
 
   return (
     <PageShell>
-      <PageHeader eyebrow="Publishing" title="Articles" description="Write, publish and archive news and blog posts.">
+      <PageHeader eyebrow="Admin Panel" title="Articles" description="Write, publish and archive news and blog posts.">
         <div className="flex flex-wrap gap-6 items-center self-start">
           <AdminSwitch />
           <Link to="/admin/new" className="inline-flex items-center gap-2 px-6 py-3 bg-gold text-forest text-[10px] tracking-micro uppercase hover:bg-gold-light transition-colors">

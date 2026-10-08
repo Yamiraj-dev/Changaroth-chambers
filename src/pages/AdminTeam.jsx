@@ -30,7 +30,7 @@ export default function AdminTeam() {
 
   return (
     <PageShell>
-      <PageHeader eyebrow="Publishing" title="Team" description="Add, edit, reorder and remove staff members.">
+      <PageHeader eyebrow="Admin Panel" title="Team" description="Add, edit, reorder and remove staff members.">
         <div className="flex flex-wrap gap-6 items-center self-start">
           <AdminSwitch />
           <Link to="/admin/team/new" className="inline-flex items-center gap-2 px-6 py-3 bg-gold text-forest text-[10px] tracking-micro uppercase hover:bg-gold-light transition-colors">

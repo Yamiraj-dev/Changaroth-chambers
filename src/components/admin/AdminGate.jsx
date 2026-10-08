@@ -12,7 +12,7 @@ export default function AdminGate() {
       <PageShell>
         <div className="text-center py-24">
           <h1 className="font-display text-4xl text-hero-cream">Restricted area</h1>
-          <p className="mt-4 text-mist">Only firm administrators can access the publishing area.</p>
+          <p className="mt-4 text-mist">Only firm administrators can access the admin panel.</p>
           <Link to="/" className="inline-block mt-8 text-[10px] tracking-micro uppercase text-gold">Return home</Link>
         </div>
       </PageShell>

@@ -121,7 +121,7 @@ export default function CurtainNav() {
             </span>
             {isAdmin && (
               <button onClick={() => handleNav("/admin")} className="ml-auto px-5 py-2.5 bg-gold text-forest text-[11px] font-medium tracking-micro uppercase hover:bg-gold-light transition-colors">
-                Publishing
+                Admin Panel
               </button>
             )}
           </div>
