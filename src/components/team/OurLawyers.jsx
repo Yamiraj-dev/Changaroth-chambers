@@ -14,7 +14,13 @@ const LAWYERS = [
     practice: "Civil Litigation, Debt Recovery, Personal Injury",
     education: "Sultan Sharif Ali Islamic University, LLB & BSL",
   },
-  { name: "Zunorin Rahman", role: "Syarie Counsel", image: BASE + "39e478dc1_zunorin.jpg" },
+  {
+    name: "Zunorin Abd Rahman",
+    role: "Syarie Counsel",
+    image: BASE + "39e478dc1_zunorin.jpg",
+    practice: "Syariah Law",
+    education: "Sultan Sharif Ali Islamic University, BSL",
+  },
   {
     name: "Izzatul Mohaimin",
     image: BASE + "a1afc7841_izzatul.jpg",
