@@ -35,10 +35,9 @@ const PRACTICES = [
     n: "04",
     title: "Syariah",
     items: [
-      "Islamic finance structuring",
+      "Probate / Administration (Faraid)",
       "Family & personal status matters",
-      "Wakaf and estate planning",
-      "Syariah-compliant transactions",
+      "Syariah-compliant transactions (Hibah and Wasiat)",
     ],
   },
   {
