@@ -44,7 +44,7 @@ const PRACTICES = [
     n: "05",
     title: "Commissioner for Oaths",
     items: [
-      "Commissioned to administer oaths, affirmations, and statutory declarations with full legal authority and discretion.",
+      "Commissioned to administer oaths & affirmations.",
     ],
   },
 ];

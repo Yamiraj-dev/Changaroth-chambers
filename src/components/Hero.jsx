@@ -49,7 +49,7 @@ export default function Hero() {
           {/* Intro paragraph + CTA */}
           <div className="max-w-md md:text-right">
             <p className="text-mist text-sm md:text-base leading-relaxed">
-              Grounded in Brunei's legal tradition and committed to the rule of law,
+              Committed to the rule of law,
               we engage in professional collaboration with regional counterparts to
               support ethical practice, legal development, and knowledge sharing.
             </p>

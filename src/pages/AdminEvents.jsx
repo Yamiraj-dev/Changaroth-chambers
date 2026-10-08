@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import AdminSwitch from "@/components/admin/AdminSwitch";
 import { Loader2, Plus } from "lucide-react";
 import { base44 } from "@/api/base44Client";
 import PageShell from "@/components/PageShell";
@@ -35,7 +36,7 @@ export default function AdminEvents() {
     <PageShell>
       <PageHeader eyebrow="Publishing" title="Events" description="Upload, publish and archive event posters.">
         <div className="flex flex-wrap gap-6 items-center self-start">
-          <Link to="/admin" className="text-[10px] tracking-micro uppercase text-mist hover:text-gold">Articles</Link>
+          <AdminSwitch />
           <Link to="/admin/events/new" className="inline-flex items-center gap-2 px-6 py-3 bg-gold text-forest text-[10px] tracking-micro uppercase hover:bg-gold-light transition-colors">
             <Plus className="w-3.5 h-3.5" /> New event
           </Link>

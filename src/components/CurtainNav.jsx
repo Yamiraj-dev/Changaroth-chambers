@@ -54,7 +54,7 @@ export default function CurtainNav() {
       >
         <div className="px-6 md:px-12 flex items-center justify-between">
           {/* Logo */}
-          <Link to="/home" onClick={(e) => { e.preventDefault(); handleNav("/home"); }} className="group flex items-center gap-3 text-white group-hover:text-gold transition-colors">
+          <Link to="/home" onClick={(e) => { e.preventDefault(); handleNav("/home"); }} className="group flex items-center gap-3 text-white transition-all duration-300 md:-mx-3 md:-my-2 md:px-3 md:py-2 border border-transparent md:hover:border-gold/40 md:hover:bg-gold/5">
             <NavMark />
           </Link>
 
@@ -120,7 +120,7 @@ export default function CurtainNav() {
               Rights Respected, Disputes Resolved.
             </span>
             {isAdmin && (
-              <button onClick={() => handleNav("/admin")} className="ml-auto text-[10px] tracking-micro uppercase text-gold hover:text-gold-light">
+              <button onClick={() => handleNav("/admin")} className="ml-auto px-5 py-2.5 bg-gold text-forest text-[11px] font-medium tracking-micro uppercase hover:bg-gold-light transition-colors">
                 Publishing
               </button>
             )}
