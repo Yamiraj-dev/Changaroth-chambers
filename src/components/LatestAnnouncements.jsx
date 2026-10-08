@@ -29,6 +29,12 @@ export default function LatestAnnouncements() {
           {a.summary && <p className="mt-2 text-sm text-mist leading-relaxed line-clamp-3">{a.summary}</p>}
         </Link>
       ))}
+      <div className="md:col-span-3 flex justify-center pt-4">
+        <Link to="/news" className="group inline-flex items-center gap-3 border border-gold px-7 py-3 hover:bg-gold transition-all duration-500">
+          <span className="text-[10px] tracking-micro uppercase text-gold group-hover:text-forest transition-colors duration-500">Explore more of our articles</span>
+          <span className="w-6 h-px bg-gold group-hover:bg-forest transition-all duration-500" />
+        </Link>
+      </div>
     </div>
   );
 }
