@@ -19,6 +19,9 @@ import About from '@/pages/About';
 import Contact from '@/pages/Contact';
 import AdminArticles from '@/pages/AdminArticles';
 import ArticleEditor from '@/pages/ArticleEditor';
+import Events from '@/pages/Events';
+import AdminEvents from '@/pages/AdminEvents';
+import EventEditor from '@/pages/EventEditor';
 import ProtectedRoute from '@/components/ProtectedRoute';
 import AdminGate from '@/components/admin/AdminGate';
 
@@ -57,6 +60,7 @@ const AuthenticatedApp = () => {
       <Route path="/news" element={<News />} />
       <Route path="/news/:slug" element={<ArticleView />} />
       <Route path="/social" element={<Social />} />
+      <Route path="/events" element={<Events />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route element={<ProtectedRoute unauthenticatedElement={<Navigate to="/login?returnTo=%2Fadmin" replace />} />}>
@@ -64,6 +68,9 @@ const AuthenticatedApp = () => {
           <Route path="/admin" element={<AdminArticles />} />
           <Route path="/admin/new" element={<ArticleEditor />} />
           <Route path="/admin/edit/:id" element={<ArticleEditor />} />
+          <Route path="/admin/events" element={<AdminEvents />} />
+          <Route path="/admin/events/new" element={<EventEditor />} />
+          <Route path="/admin/events/edit/:id" element={<EventEditor />} />
         </Route>
       </Route>
       <Route path="*" element={<PageNotFound />} />
