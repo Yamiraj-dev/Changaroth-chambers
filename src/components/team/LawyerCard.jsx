@@ -23,6 +23,7 @@ export default function LawyerCard({ lawyer, index }) {
         <span className="block w-8 h-px bg-gold/50 my-3" />
         {lawyer.practice && <p className="text-xs text-hero-cream"><span className="text-gold">Practice:</span> {lawyer.practice}</p>}
         {lawyer.education && <p className="mt-1 text-xs text-hero-cream"><span className="text-gold">Education:</span> {lawyer.education}</p>}
+        {lawyer.qualifications && <p className="mt-1 text-xs text-hero-cream"><span className="text-gold">Qualifications:</span> {lawyer.qualifications}</p>}
         {lawyer.bio && <p className={`mt-2 text-mist text-xs leading-relaxed ${lawyer.practice ? "md:line-clamp-3 2xl:line-clamp-4" : "md:line-clamp-5"}`}>{lawyer.bio}</p>}
       </div>
     </article>

@@ -13,6 +13,7 @@ const LAWYERS = [
     image: BASE + "f2d16fd32_LR.jpg",
     practice: "Criminal Litigation, Civil Litigation, Commercial, ADR Specialist",
     education: "International Islamic University Malaysia, LLB",
+    qualifications: "Digital Dispute Resolution Specialist, ADR ODR International",
   },
   {
     name: "Miza Musa",
