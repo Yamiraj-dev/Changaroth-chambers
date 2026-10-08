@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Instagram, Facebook, Linkedin } from "lucide-react";
 import { base44 } from "@/api/base44Client";
+import OfficeMap from "@/components/OfficeMap";
 
 export default function ContactSection() {
   const [form, setForm] = useState({ name: "", matter: "", contact: "" });
@@ -61,6 +62,7 @@ export default function ContactSection() {
 
             {/* Contact details */}
             <div className="space-y-6 border-t border-white/10 pt-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-stretch">
               <div>
                 <p className="text-[10px] tracking-micro uppercase text-gold mb-1">Address</p>
                 <p className="text-white text-sm leading-relaxed">
@@ -72,6 +74,8 @@ export default function ContactSection() {
                   <br />
                   Brunei Darussalam
                 </p>
+              </div>
+              <OfficeMap />
               </div>
               <div className="flex flex-col sm:flex-row gap-6">
                 <div>
