@@ -19,7 +19,7 @@ export default function LatestAnnouncements() {
         <Link key={a.id} to={`/news/${a.slug}`} className="group block">
           {a.cover_image && (
             <div className="relative aspect-[16/10] mb-5 border border-gold/15 bg-forest-light">
-              <Image src={a.cover_image} alt={a.title} fittingType="fit" className="w-full h-full" />
+              <img src={a.cover_image} alt={a.title} className="absolute inset-0 w-full h-full object-contain" />
             </div>
           )}
           <p className="text-[10px] tracking-micro uppercase text-gold/80">

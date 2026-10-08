@@ -43,8 +43,8 @@ export default function ArticleView() {
             </p>
           </div>
           {article.cover_image && (
-            <div className="relative aspect-[21/9] border border-gold/15 overflow-hidden mb-16">
-              <Image src={article.cover_image} alt={article.title} fittingType="fit" className="w-full h-full" />
+            <div className="flex justify-center mb-16">
+              <img src={article.cover_image} alt={article.title} className="block max-w-full h-auto border border-gold/15" />
             </div>
           )}
           <div className="max-w-2xl mx-auto">

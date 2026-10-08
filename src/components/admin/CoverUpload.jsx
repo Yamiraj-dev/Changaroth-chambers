@@ -17,8 +17,8 @@ export default function CoverUpload({ value, onChange }) {
 
   if (value) {
     return (
-      <div className="relative aspect-[21/9] border border-gold/20 overflow-hidden">
-        <Image src={value} alt="Cover" fittingType="fit" className="w-full h-full" />
+      <div className="relative flex justify-center border border-gold/20">
+        <img src={value} alt="Cover" className="block max-w-full h-auto" />
         <button type="button" onClick={() => onChange("")} className="absolute top-3 right-3 p-2 bg-forest-deep/80 text-gold hover:text-gold-light">
           <X className="w-4 h-4" />
         </button>

@@ -15,7 +15,7 @@ export default function ArticleCard({ article, index = 0 }) {
       <Link to={`/news/${article.slug}`} className="group block">
         <div className="relative aspect-[4/3] overflow-hidden border border-gold/15 bg-forest-light">
           {article.cover_image ? (
-            <Image src={article.cover_image} alt={article.title} fittingType="fit" className="w-full h-full" />
+            <img src={article.cover_image} alt={article.title} className="absolute inset-0 w-full h-full object-contain" />
           ) : (
             <div className="absolute inset-0 flex items-center justify-center font-display text-6xl text-stroke-gold opacity-40">CC</div>
           )}
