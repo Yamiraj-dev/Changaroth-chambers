@@ -6,6 +6,7 @@ import PracticeGrid from "@/components/PracticeGrid";
 import OurApproach from "@/components/OurApproach";
 import ClientSupport from "@/components/ClientSupport";
 import ContactSection from "@/components/ContactSection";
+import NewsEventsSection from "@/components/NewsEventsSection";
 import Footer from "@/components/Footer";
 import OurLawyers from "@/components/team/OurLawyers";
 
@@ -35,6 +36,7 @@ export default function Home() {
           <OurApproach />
           <OurLawyers />
           <ClientSupport />
+          <NewsEventsSection />
           <ContactSection />
         </div>
         <Footer />

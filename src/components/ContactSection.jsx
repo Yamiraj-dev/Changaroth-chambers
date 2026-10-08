@@ -42,7 +42,7 @@ export default function ContactSection() {
       <div className="max-w-[1600px] mx-auto">
         {/* Section label */}
         <div className="flex items-center gap-4 mb-16 md:mb-24">
-          <span className="font-display italic text-gold text-sm">05</span>
+          <span className="font-display italic text-gold text-sm">06</span>
           <span className="w-12 h-px bg-gold/40" />
           <span className="text-[11px] tracking-micro uppercase text-mist">Contact</span>
         </div>
