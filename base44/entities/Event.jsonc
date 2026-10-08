@@ -19,6 +19,13 @@
         "image"
       ]
     },
+    "gallery": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
     "status": {
       "type": "string",
       "enum": [

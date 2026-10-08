@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { format } from "date-fns";
 
-export default function ArticleRow({ article, onStatus }) {
+export default function ArticleRow({ article, onStatus, onDelete }) {
   const date = article.published_date || article.updated_date;
   return (
     <div className="flex flex-col md:flex-row md:items-center gap-4 py-6 border-b border-white/10">
@@ -18,6 +18,7 @@ export default function ArticleRow({ article, onStatus }) {
         {article.status === "draft" && <button onClick={() => onStatus(article, "published")} className="text-mist hover:text-gold">Publish</button>}
         {article.status === "published" && <button onClick={() => onStatus(article, "archived")} className="text-mist hover:text-gold">Archive</button>}
         {article.status === "archived" && <button onClick={() => onStatus(article, "published")} className="text-mist hover:text-gold">Restore</button>}
+        <button onClick={() => onDelete(article)} className="text-red-400 hover:text-red-300">Delete</button>
       </div>
     </div>
   );

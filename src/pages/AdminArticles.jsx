@@ -27,6 +27,12 @@ export default function AdminArticles() {
     load();
   };
 
+  const remove = async (article) => {
+    if (!window.confirm(`Delete "${article.title}"?`)) return;
+    await base44.entities.Article.delete(article.id);
+    load();
+  };
+
   const list = (articles || []).filter((a) => a.status === tab);
 
   return (
@@ -52,7 +58,7 @@ export default function AdminArticles() {
       ) : list.length === 0 ? (
         <p className="py-20 text-center text-mist">Nothing here yet.</p>
       ) : (
-        list.map((a) => <ArticleRow key={a.id} article={a} onStatus={changeStatus} />)
+        list.map((a) => <ArticleRow key={a.id} article={a} onStatus={changeStatus} onDelete={remove} />)
       )}
     </PageShell>
   );
