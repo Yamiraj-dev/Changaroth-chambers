@@ -8,7 +8,7 @@ const STAFF = [
   { name: "Adiva Alimmin", role: "Paralegal", image: BASE + "030f7f8b1_adivaa.jpg" },
   { name: "Zaim Adli", role: "Paralegal", image: BASE + "60b01d493_zaim.jpg" },
   { name: "Asyraf Ibrahim", role: "Pupil", image: BASE + "8b9e240db_asyraf.jpg" },
-].map((p) => ({ role: "Support Staff", bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", ...p }));
+].map((p) => ({ role: "Support Staff", ...p }));
 
 export default function RestOfTeam() {
   const [open, setOpen] = useState(false);
