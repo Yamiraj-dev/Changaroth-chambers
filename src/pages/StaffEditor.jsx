@@ -9,10 +9,10 @@ import CoverUpload from "@/components/admin/CoverUpload";
 
 const fieldClass = "w-full bg-transparent border-b border-white/15 focus:border-gold outline-none py-3 text-hero-cream placeholder:text-mist/50 transition-colors";
 const FIELDS = [
-  ["role", "Role (e.g. Associate, Paralegal)"],
-  ["practice", "Practice areas"],
-  ["education", "Education"],
-  ["qualifications", "Qualifications"],
+  ["role", "Title", "e.g. Associate, Paralegal"],
+  ["practice", "Practice", "Leave blank to hide"],
+  ["education", "Education", "Leave blank to hide"],
+  ["qualifications", "Qualifications", "Leave blank to hide"],
 ];
 
 export default function StaffEditor() {
@@ -57,9 +57,13 @@ export default function StaffEditor() {
                 className={`px-5 py-2.5 text-[10px] tracking-micro uppercase border transition-colors ${form.group === k ? "border-gold bg-gold/15 text-gold" : "border-white/15 text-mist hover:text-gold"}`}>{l}</button>
             ))}
           </div>
-          {FIELDS.map(([k, p]) => (
-            <input key={k} value={form[k] || ""} onChange={(e) => set(k)(e.target.value)} placeholder={p} className={fieldClass} />
+          {FIELDS.map(([k, label, p]) => (
+            <label key={k} className="block">
+              <span className="text-[10px] tracking-micro uppercase text-gold">{label}</span>
+              <input value={form[k] || ""} onChange={(e) => set(k)(e.target.value)} placeholder={p} className={fieldClass} />
+            </label>
           ))}
+          <span className="block text-[10px] tracking-micro uppercase text-gold -mb-6">Bio</span>
           <textarea value={form.bio || ""} onChange={(e) => set("bio")(e.target.value)} placeholder="Short bio (optional)" rows={3} className={`${fieldClass} resize-none`} />
           <div className="max-w-xs"><CoverUpload value={form.image} onChange={set("image")} /></div>
           <div className="pt-4 border-t border-white/10">
