@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 const ITEMS = [
   { to: "/admin", label: "News & Articles" },
   { to: "/admin/events", label: "Events" },
+  { to: "/admin/team", label: "Team" },
 ];
 
 export default function AdminSwitch() {

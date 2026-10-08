@@ -22,6 +22,8 @@ import ArticleEditor from '@/pages/ArticleEditor';
 import Events from '@/pages/Events';
 import AdminEvents from '@/pages/AdminEvents';
 import EventEditor from '@/pages/EventEditor';
+import AdminTeam from '@/pages/AdminTeam';
+import StaffEditor from '@/pages/StaffEditor';
 import ProtectedRoute from '@/components/ProtectedRoute';
 import AdminGate from '@/components/admin/AdminGate';
 
@@ -72,6 +74,9 @@ const AuthenticatedApp = () => {
           <Route path="/admin/events" element={<AdminEvents />} />
           <Route path="/admin/events/new" element={<EventEditor />} />
           <Route path="/admin/events/edit/:id" element={<EventEditor />} />
+          <Route path="/admin/team" element={<AdminTeam />} />
+          <Route path="/admin/team/new" element={<StaffEditor />} />
+          <Route path="/admin/team/edit/:id" element={<StaffEditor />} />
         </Route>
       </Route>
       <Route path="*" element={<PageNotFound />} />

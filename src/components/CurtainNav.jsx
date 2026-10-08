@@ -9,9 +9,9 @@ const NAV_ITEMS = [
   { label: "How We Practice", to: "#approach" },
   { label: "Our Lawyers", to: "#team" },
   { label: "Client Support", to: "#support" },
-  { label: "Contact", to: "#contact" },
   { label: "News", to: "/news" },
   { label: "Events", to: "/events" },
+  { label: "Contact", to: "#contact" },
   { label: "Social", to: "/social" },
 ];
 

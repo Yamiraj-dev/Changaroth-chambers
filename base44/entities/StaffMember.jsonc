@@ -1,0 +1,60 @@
+{
+  "name": "StaffMember",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "group": {
+      "type": "string",
+      "enum": [
+        "lawyer",
+        "support"
+      ],
+      "default": "lawyer"
+    },
+    "image": {
+      "type": "string"
+    },
+    "practice": {
+      "type": "string"
+    },
+    "education": {
+      "type": "string"
+    },
+    "qualifications": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "string"
+    },
+    "order": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "name"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
