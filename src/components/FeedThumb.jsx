@@ -1,4 +1,5 @@
 import React from "react";
+import { Image } from "@/components/ui/image";
 
 // Uniform thumbnail box used by both homepage feeds.
 export default function FeedThumb({ src, alt, pdf }) {
@@ -7,7 +8,7 @@ export default function FeedThumb({ src, alt, pdf }) {
       {pdf ? (
         <iframe src={`${src}#toolbar=0&navpanes=0&view=FitH`} title={alt} className="absolute inset-0 w-full h-full pointer-events-none bg-white" />
       ) : src ? (
-        <img src={src} alt={alt} className="absolute inset-0 w-full h-full object-contain" />
+        <Image src={src} alt={alt} fittingType="fit" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full" />
       ) : null}
     </div>
   );

@@ -15,7 +15,7 @@ const fieldClass = "w-full bg-transparent border-b border-white/15 focus:border-
 export default function ArticleEditor() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [form, setForm] = useState({ title: "", summary: "", cover_image: "", body: "", published_date: "" });
+  const [form, setForm] = useState({ title: "", summary: "", cover_image: "", body: "", published_date: "", author_name: "" });
   const [existing, setExisting] = useState(null);
   const [loading, setLoading] = useState(!!id);
   const [saving, setSaving] = useState(false);
@@ -24,7 +24,7 @@ export default function ArticleEditor() {
     if (!id) return;
     base44.entities.Article.get(id).then((a) => {
       setExisting(a);
-      setForm({ title: a.title || "", summary: a.summary || "", cover_image: a.cover_image || "", body: a.body || "", published_date: a.published_date ? a.published_date.slice(0, 10) : "" });
+      setForm({ title: a.title || "", summary: a.summary || "", cover_image: a.cover_image || "", body: a.body || "", published_date: a.published_date ? a.published_date.slice(0, 10) : "", author_name: a.author_name || "" });
       setLoading(false);
     });
   }, [id]);
@@ -40,8 +40,8 @@ export default function ArticleEditor() {
     if (existing) {
       await base44.entities.Article.update(existing.id, data);
     } else {
-      const me = await base44.auth.me();
-      await base44.entities.Article.create({ ...data, slug: slugify(form.title), author_name: me.full_name });
+      if (!data.author_name) data.author_name = (await base44.auth.me()).full_name;
+      await base44.entities.Article.create({ ...data, slug: slugify(form.title) });
     }
     navigate("/admin");
   };
@@ -60,6 +60,10 @@ export default function ArticleEditor() {
           <p className="text-[10px] tracking-micro uppercase text-gold">{existing ? `Editing · ${status}` : "New article"}</p>
           <input value={form.title} onChange={(e) => set("title")(e.target.value)} placeholder="Article title" className={`${fieldClass} font-display text-3xl md:text-4xl`} />
           <textarea value={form.summary} onChange={(e) => set("summary")(e.target.value)} placeholder="Short summary shown on the news page" rows={2} className={`${fieldClass} resize-none`} />
+          <label className="block">
+            <span className="text-[10px] tracking-micro uppercase text-gold">Author</span>
+            <input value={form.author_name} onChange={(e) => set("author_name")(e.target.value)} placeholder="Author name" className={fieldClass} />
+          </label>
           <label className="block">
             <span className="text-[10px] tracking-micro uppercase text-gold">Article date (defaults to publish day)</span>
             <input type="date" value={form.published_date} onChange={(e) => set("published_date")(e.target.value)} className={`${fieldClass} [color-scheme:dark]`} />

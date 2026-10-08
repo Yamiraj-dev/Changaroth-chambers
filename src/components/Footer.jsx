@@ -58,7 +58,7 @@ export default function Footer() {
                 aria-label={a.name}
                 className={`flex items-center justify-center w-72 h-28 px-6 py-4 border border-gold/30 hover:border-gold transition-colors ${a.bg}`}
               >
-                <img src={a.logo} alt={a.name} className="h-full w-full object-contain" />
+                <img loading="lazy" decoding="async" src={a.logo} alt={a.name} className="h-full w-full object-contain" />
               </a>
             ))}
           </div>

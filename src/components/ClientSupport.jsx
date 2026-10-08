@@ -41,6 +41,8 @@ export default function ClientSupport() {
           {/* Left: image */}
           <div className="relative aspect-[16/10] lg:aspect-auto lg:min-h-[560px] overflow-hidden">
             <img
+              loading="lazy"
+              decoding="async"
               src={IMAGE_URL}
               alt="Changaroth Chambers front desk with wall logo"
               className="absolute inset-0 w-full h-full object-cover object-[25%_center]"

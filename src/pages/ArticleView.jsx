@@ -44,7 +44,7 @@ export default function ArticleView() {
           </div>
           {article.cover_image && (
             <div className="flex justify-center mb-16">
-              <img src={article.cover_image} alt={article.title} className="block max-w-full h-auto border border-gold/15" />
+              <img decoding="async" fetchpriority="high" src={article.cover_image} alt={article.title} className="block max-w-full h-auto border border-gold/15" />
             </div>
           )}
           <div className="max-w-2xl mx-auto">
