@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Instagram, Facebook, Linkedin } from "lucide-react";
 import { base44 } from "@/api/base44Client";
 import OfficeMap from "@/components/OfficeMap";
+import InternApplication from "@/components/InternApplication";
 
 export default function ContactSection() {
   const [form, setForm] = useState({ name: "", matter: "", contact: "" });
@@ -185,6 +186,7 @@ export default function ContactSection() {
           </div>
         </div>
       </div>
+      <div className="-mx-6 md:-mx-12 mt-20"><InternApplication /></div>
     </section>);
 
 }
