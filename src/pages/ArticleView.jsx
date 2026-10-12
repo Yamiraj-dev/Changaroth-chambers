@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { format } from "date-fns";
-import { ArrowLeft, Loader2, Share2 } from "lucide-react";
+import { ArrowLeft, Loader2, Share2, ExternalLink } from "lucide-react";
 import { base44 } from "@/api/base44Client";
 import { Image } from "@/components/ui/image";
 import { useToast } from "@/components/ui/use-toast";
@@ -50,6 +50,11 @@ export default function ArticleView() {
           <div className="max-w-2xl mx-auto">
             {article.summary && <p className="font-display text-xl md:text-2xl text-hero-cream/90 leading-relaxed mb-10">{article.summary}</p>}
             <div className="article-body" dangerouslySetInnerHTML={{ __html: (article.body || "").replace(/&nbsp;|\u00a0/g, " ") }} />
+            {article.external_link && (
+              <a href={/^https?:\/\//.test(article.external_link) ? article.external_link : `https://${article.external_link}`} target="_blank" rel="noopener noreferrer" className="mt-10 inline-flex items-center gap-2 px-6 py-3 bg-gold text-forest text-[11px] font-medium tracking-micro uppercase hover:bg-gold-light">
+                Visit link <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            )}
             <div className="mt-16 pt-8 border-t border-white/10 flex justify-between items-center">
               <Link to="/news" className="text-[10px] tracking-micro uppercase text-mist hover:text-gold transition-colors">Back to news</Link>
               <button onClick={share} className="inline-flex items-center gap-2 text-[10px] tracking-micro uppercase text-gold hover:text-gold-light">

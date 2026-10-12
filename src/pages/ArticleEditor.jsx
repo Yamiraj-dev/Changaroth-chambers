@@ -15,7 +15,7 @@ const fieldClass = "w-full bg-transparent border-b border-white/15 focus:border-
 export default function ArticleEditor() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [form, setForm] = useState({ title: "", summary: "", cover_image: "", body: "", published_date: "", author_name: "" });
+  const [form, setForm] = useState({ title: "", summary: "", cover_image: "", body: "", published_date: "", author_name: "", external_link: "" });
   const [existing, setExisting] = useState(null);
   const [loading, setLoading] = useState(!!id);
   const [saving, setSaving] = useState(false);
@@ -24,7 +24,7 @@ export default function ArticleEditor() {
     if (!id) return;
     base44.entities.Article.get(id).then((a) => {
       setExisting(a);
-      setForm({ title: a.title || "", summary: a.summary || "", cover_image: a.cover_image || "", body: a.body || "", published_date: a.published_date ? a.published_date.slice(0, 10) : "", author_name: a.author_name || "" });
+      setForm({ title: a.title || "", summary: a.summary || "", cover_image: a.cover_image || "", body: a.body || "", published_date: a.published_date ? a.published_date.slice(0, 10) : "", author_name: a.author_name || "", external_link: a.external_link || "" });
       setLoading(false);
     });
   }, [id]);
@@ -67,6 +67,10 @@ export default function ArticleEditor() {
           <label className="block">
             <span className="text-[10px] tracking-micro uppercase text-gold">Article date (defaults to publish day)</span>
             <input type="date" value={form.published_date} onChange={(e) => set("published_date")(e.target.value)} className={`${fieldClass} [color-scheme:dark]`} />
+          </label>
+          <label className="block">
+            <span className="text-[10px] tracking-micro uppercase text-gold">Visit link (optional)</span>
+            <input value={form.external_link} onChange={(e) => set("external_link")(e.target.value)} placeholder="https://..." className={fieldClass} />
           </label>
           <CoverUpload value={form.cover_image} onChange={set("cover_image")} />
           <RichEditor value={form.body} onChange={set("body")} />
