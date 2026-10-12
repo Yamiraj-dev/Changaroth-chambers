@@ -183,10 +183,10 @@ export default function ContactSection() {
                 create a solicitor–client relationship.
               </p>
             </form>
+            <div className="mt-10"><InternApplication /></div>
           </div>
         </div>
       </div>
-      <div className="-mx-6 md:-mx-12 mt-20"><InternApplication /></div>
     </section>);
 
 }

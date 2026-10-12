@@ -30,14 +30,16 @@ export default function InternApplication() {
   };
 
   return (
-    <section className="px-6 md:px-12 py-20 border-t border-white/10">
-      <div className="max-w-3xl mx-auto">
-        <p className="text-[10px] tracking-micro uppercase text-gold mb-3">Careers</p>
-        <button type="button" onClick={() => setOpen(!open)} className="w-full flex items-center justify-between text-left mb-4">
-          <h2 className="font-display text-3xl md:text-4xl text-hero-cream">Internship Application</h2>
-          <ChevronDown className={`w-6 h-6 text-gold transition-transform ${open ? "rotate-180" : ""}`} />
+    <section className="border border-gold/30">
+      <div className="p-5">
+        <button type="button" onClick={() => setOpen(!open)} className="w-full flex items-center justify-between text-left">
+          <span>
+            <span className="block text-[10px] tracking-micro uppercase text-gold">Careers</span>
+            <span className="font-display text-xl text-hero-cream">Internship Application</span>
+          </span>
+          <ChevronDown className={`w-5 h-5 text-gold transition-transform ${open ? "rotate-180" : ""}`} />
         </button>
-        {open && <p className="text-mist mb-10">Please upload your CV/Resume and personal statement along with the details below.</p>}
+        {open && <p className="text-mist text-sm mt-4 mb-6">Please upload your CV/Resume and personal statement along with the details below.</p>}
         {!open ? null : done ? (
           <p className="text-gold border border-gold/30 p-6">Thank you. Your application has been received.</p>
         ) : (
