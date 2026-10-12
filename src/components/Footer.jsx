@@ -11,28 +11,6 @@ export default function Footer() {
   return (
     <footer className="relative bg-forest-deep pt-24 md:pt-32 pb-10 px-6 md:px-12 overflow-hidden border-t border-white/5">
       <div className="max-w-[1600px] mx-auto">
-        {/* Announcements strip */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-12 md:mb-16 pb-12 border-b border-white/10">
-          <div>
-            <p className="text-[10px] tracking-micro uppercase text-gold mb-2">
-              Announcements, Insights and Publications
-            </p>
-            <p className="font-display text-2xl md:text-3xl font-light text-white">
-              For future announcements of events and publications.
-            </p>
-          </div>
-          <button
-            onClick={() => {
-              const el = document.querySelector("#contact");
-              if (el) el.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="group flex items-center gap-3 text-mist hover:text-gold transition-colors self-start"
-          >
-            <span className="text-[10px] tracking-micro uppercase">Subscribe</span>
-            <span className="w-10 h-px bg-gold group-hover:w-16 transition-all duration-500" />
-          </button>
-        </div>
-
         {/* Landing logo */}
         <div className="flex justify-center mb-16">
           <HeroWordmark mounted />
