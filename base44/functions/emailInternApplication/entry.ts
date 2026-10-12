@@ -9,13 +9,13 @@ export default async function(req) {
     if (!id) return Response.json({ error: 'id required' }, { status: 400 });
     const a = await base44.asServiceRole.entities.InternApplication.get(id);
     if (!a) return Response.json({ error: 'Not found' }, { status: 404 });
-    const links = await Promise.all((a.documents || []).slice(0, 5).map((file_uri) =>
-      base44.asServiceRole.integrations.Core.CreateFileSignedUrl({ file_uri, expires_in: 604800 }).then((r) => r.signed_url)));
+    const attachments = (a.documents || []).slice(0, 5).map((file_url) => ({ file_url, filename: file_url.split('/').pop().replace(/^[a-z0-9]+_/, '') }));
     await base44.asServiceRole.integrations.Core.SendEmail({
       to: 'resolve@changarothchambersbn.com',
       from_name: 'no-reply',
       subject: `Internship Application from ${String(a.name).slice(0, 80)}`,
-      body: `<p><strong>Name:</strong> ${esc(a.name)}</p><p><strong>Email:</strong> ${esc(a.email)}</p><p><strong>Education:</strong> ${esc(a.education)}</p><p><strong>Proposed duration:</strong> ${esc(a.duration)}</p><p><strong>Personal statement:</strong><br/>${esc(a.personal_statement).replace(/\n/g, '<br/>')}</p><p><strong>Documents (links valid 7 days):</strong><br/>${links.map((l, i) => `<a href="${esc(l)}">Document ${i + 1}</a>`).join('<br/>')}</p>`,
+      body: `<p><strong>Name:</strong> ${esc(a.name)}</p><p><strong>Email:</strong> ${esc(a.email)}</p><p><strong>Education:</strong> ${esc(a.education)}</p><p><strong>Proposed duration:</strong> ${esc(a.duration)}</p><p><strong>Personal statement:</strong><br/>${esc(a.personal_statement).replace(/\n/g, '<br/>')}</p><p><strong>Documents:</strong> ${attachments.length} attached</p>`,
+      attachments,
     });
     return Response.json({ ok: true });
   } catch (error) {
