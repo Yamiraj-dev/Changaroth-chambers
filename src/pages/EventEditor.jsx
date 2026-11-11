@@ -7,6 +7,7 @@ import PageShell from "@/components/PageShell";
 import GoldButton from "@/components/GoldButton";
 import PosterUpload from "@/components/admin/PosterUpload";
 import GalleryUpload from "@/components/admin/GalleryUpload";
+import PosterSizeToggle from "@/components/admin/PosterSizeToggle";
 
 const fieldClass = "w-full bg-transparent border-b border-white/15 focus:border-gold outline-none py-3 text-hero-cream placeholder:text-mist/50 transition-colors";
 
@@ -14,7 +15,7 @@ export default function EventEditor() {
   const { id } = useParams();
   const navigate = useNavigate();
   const queryClient = useQueryClient();
-  const [form, setForm] = useState({ title: "", event_date: "", poster_url: "", poster_type: "", gallery: [] });
+  const [form, setForm] = useState({ title: "", event_date: "", poster_url: "", poster_type: "", poster_is_a4: true, gallery: [] });
   const [existing, setExisting] = useState(null);
   const [loading, setLoading] = useState(!!id);
   const [saving, setSaving] = useState(false);
@@ -23,7 +24,7 @@ export default function EventEditor() {
     if (!id) return;
     base44.entities.Event.get(id).then((e) => {
       setExisting(e);
-      setForm({ title: e.title || "", event_date: e.event_date || "", poster_url: e.poster_url || "", poster_type: e.poster_type || "", gallery: e.gallery || [] });
+      setForm({ title: e.title || "", event_date: e.event_date || "", poster_url: e.poster_url || "", poster_type: e.poster_type || "", poster_is_a4: e.poster_is_a4 !== false, gallery: e.gallery || [] });
       setLoading(false);
     });
   }, [id]);
@@ -57,7 +58,10 @@ export default function EventEditor() {
             <span className="text-[10px] tracking-micro uppercase text-gold">Event date</span>
             <input type="date" value={form.event_date} onChange={(e) => setForm({ ...form, event_date: e.target.value })} className={`${fieldClass} [color-scheme:dark]`} />
           </label>
-          <PosterUpload value={form.poster_url} type={form.poster_type} onChange={setPoster} />
+          <PosterUpload value={form.poster_url} type={form.poster_type} isA4={form.poster_is_a4} onChange={setPoster} />
+          {form.poster_url && form.poster_type === "image" && (
+            <PosterSizeToggle value={form.poster_is_a4} onChange={(poster_is_a4) => setForm((f) => ({ ...f, poster_is_a4 }))} />
+          )}
           <GalleryUpload value={form.gallery} onChange={(gallery) => setForm((f) => ({ ...f, gallery }))} />
           <div className="flex flex-wrap gap-4 pt-4 border-t border-white/10">
             {status === "draft" && <GoldButton disabled={saving || !form.title} onClick={() => save("draft")}>Save draft</GoldButton>}

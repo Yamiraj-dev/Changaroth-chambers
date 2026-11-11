@@ -19,6 +19,10 @@
         "image"
       ]
     },
+    "poster_is_a4": {
+      "type": "boolean",
+      "default": true
+    },
     "gallery": {
       "type": "array",
       "items": {
@@ -33,7 +37,12 @@
         "published",
         "archived"
       ],
-      "default": "draft"
+      "default": "draft",
+      "enumColors": [
+        "gray",
+        "green",
+        "yellow"
+      ]
     }
   },
   "required": [

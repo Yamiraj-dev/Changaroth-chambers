@@ -4,7 +4,7 @@ import { base44 } from "@/api/base44Client";
 import useFileDrop from "@/hooks/useFileDrop";
 import PosterPreview from "@/components/events/PosterPreview";
 
-export default function PosterUpload({ value, type, onChange }) {
+export default function PosterUpload({ value, type, isA4, onChange }) {
   const [uploading, setUploading] = useState(false);
 
   const upload = useCallback(async (file) => {
@@ -21,7 +21,7 @@ export default function PosterUpload({ value, type, onChange }) {
   if (value) {
     return (
       <div className="relative max-w-sm mx-auto">
-        <PosterPreview event={{ poster_url: value, poster_type: type, title: "Poster" }} />
+        <PosterPreview event={{ poster_url: value, poster_type: type, poster_is_a4: isA4, title: "Poster" }} />
         <button type="button" onClick={() => onChange("", "")} className="absolute top-3 right-3 p-2 bg-forest-deep/80 text-gold hover:text-gold-light">
           <X className="w-4 h-4" />
         </button>
